@@ -11,20 +11,20 @@
 
     <!-- estilo customizado -->
     <link rel="stylesheet" href="style.css">
-
+    <!-- script customizado -->
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md container-md" id="top_nav">
-            <a class="navbar-brand" href="#" style="color: white;">
+        <nav class="navbar navbar-expand-md navbar-dark container-md px-4 px-md-0" id="top_nav">
+            <a class="navbar-brand" href="index.html">
                 <h1>GLG</h1>
             </a>
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse_nav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_nav">
                 <i class="navbar-toggler-icon"></i>
             </button>
             <div class="collapse navbar-collapse" id="collapse_nav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav gap-md-4 ms-auto">
                     <li class="nav-item">
                         <button class="" type="button" id="sobre_mim">Sobre mim</button>
                     </li>
@@ -41,18 +41,68 @@
     <main>
         <div id="container">
             <div id="sobre_mim">
-                <h2>Meu portfólio</h2>
+                <div class="container">
+                    <div class="card">
+                        
+                        <h2 class="card-header" style="font-size: 4rem;">Meu portfólio</h2>
+                        <div class="card-body">
+                            <div>
+                                <p>
+                                    Olá! 👋
+                                </p>
+                                <p>
+                                    Meu nome é Gustavo, tenho 19 anos e estou estudando no 1ºAno de Analise e Desenvolvimento de Sistemas no Instituto Federal do Paraná.
+                                </p>
+                                <p>
+                                    Tenho como objetivo aprender e crescer na área de informática, já tendo conhecimentos e experiência com hardware, agora busco me aprofundar profissionalmente no Software
+                                </p>
+                                
+                            </div>
+                            <img class="card-img float-end" id="profile_pic" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngitem.com%2Fpimgs%2Fm%2F522-5220445_anonymous-profile-grey-person-sticker-glitch-empty-profile.png&f=1&nofb=1&ipt=9633805ab3306659432c8b9d9db09b9f9cb00ad050a7a9333579f1f36051a541&ipo=images" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
             <div id="conhecimentos">
-                <h2>conhecimentos</h2>
+                <div class="container">
+                    <div class="card">
+                        <h2 class="card-header" style="font-size: 4rem;">Meus conhecimentos</h2>
+                        <div class="card-body">
+                            <div>
+                                <p>
+                                    Quando se trata de ferramentas e tecnologias, tenho prática com HTML, CSS (incluindo BootsTrap), JavaScript, PHP e MySQL
+                                </p>
+                                <p>
+                                    <i class="bi bi-filetype-html"></i>
+                                    <i class="bi bi-filetype-scss"></i>
+                                    <i class="bi bi-filetype-js"></i>
+                                    <i class="bi bi-filetype-php"></i>
+                                    <i class="bi bi-filetype-sql"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="projetos">
-                <h2>projetos</h2>
+                <div class="container">
+                    <div class="card">
+                        <h2 class="card-header" style="font-size: 4rem;">Meus projetos</h2>
+                        <div class="card-body">
+                            <div>
+                                <p>
+                                    Seguem alguns dos meus projetos até o momento
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
     <footer>
-
+        
     </footer>
     
     <!-- bootstrap -->
