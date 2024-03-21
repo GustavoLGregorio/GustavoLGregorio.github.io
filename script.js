@@ -16,3 +16,7 @@ BUTTON_CONHECIMENTOS.addEventListener("click", () => {
 BUTTON_PROJETOS.addEventListener("click", () => {
     MAIN_CONTAINER.style.right = "200%"
 })
+
+setInterval(() => {
+    document.getElementById("header").classList.toggle("neon-effect")
+}, 1500);
