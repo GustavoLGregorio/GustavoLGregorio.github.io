@@ -16,7 +16,7 @@ html, body {
 /*** <inicio> background e cores
 */
 html {
-    background: url("img/noisy-texture-300x300-o18-d23-c-000-t1.png"), #4b0082 /*linear-gradient(135deg, hsl(257.18, 100%, 50%) -40%, hsl(314.59, 100%, 50%))*/;
+    background: url("img/noise.png"), #4b0082 /*linear-gradient(135deg, hsl(257.18, 100%, 50%) -40%, hsl(314.59, 100%, 50%))*/;
 }
 body {
     background: #00224D /*hsl(275.29, 100%, 0%, 0.5)*/;
