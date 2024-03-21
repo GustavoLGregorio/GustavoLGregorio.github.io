@@ -1,10 +1,7 @@
-const MAIN_CONTAINER = document.getElementById('container')
+const MAIN_CONTAINER = document.getElementById('main_container')
 const BUTTON_SOBRE_MIM = document.getElementById('sobre_mim')
 const BUTTON_CONHECIMENTOS = document.getElementById('conhecimentos')
 const BUTTON_PROJETOS = document.getElementById('projetos')
-
-let have_class = null
-
 
 BUTTON_SOBRE_MIM.addEventListener("click", () => {
     MAIN_CONTAINER.style.right = "0%"

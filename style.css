@@ -16,10 +16,10 @@ html, body {
 /*** <inicio> background e cores
 */
 html {
-    background: url("img/noise.png"), #4b0082 /*linear-gradient(135deg, hsl(257.18, 100%, 50%) -40%, hsl(314.59, 100%, 50%))*/;
+    background: #00224D /*hsl(275.29, 100%, 0%, 0.5)*/;
 }
 body {
-    background: #00224D /*hsl(275.29, 100%, 0%, 0.5)*/;
+    background: url("img/noise.png") /*linear-gradient(135deg, hsl(257.18, 100%, 50%) -40%, hsl(314.59, 100%, 50%))*/;
     color: #ccc;
 }
 /*** </fim>
@@ -28,31 +28,29 @@ body {
 /*** <inicio> cabecalho e barra de navegação principal
 */
 header {
-    background: #5D0E41 /*hsl(275.29, 100%, 15%, 1)*/;
+    background: #5D0E41;
     width: 100%;
     position: fixed;
     z-index: 1;
 
-    border-top: 4px ridge #FF204E /* hsl(314.59, 100%, 50%, 0.8)*/;
+    border-top: 4px ridge #FF204E;
     border-bottom: 4px ridge #FF204E;
 
     box-shadow: 0px 10px 50px 10px rgba(0, 0, 0, 0.4);
 }
-
-
 #top_nav ul li {
     border-radius: 0.5rem;
     transition: 200ms ease-in-out;
 }
 #top_nav ul li:hover {
     border: 1px solid #00fff9;
-    transform: skewX(180deg);
+    transform: scale(1.1);
 }
 #top_nav ul button {
     background: none;
     border: none;
-    padding: 1rem;
-    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
     letter-spacing: 0.25rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -61,7 +59,6 @@ header {
 #top_nav ul button:hover {
     color: #00fff9;
 }
-
 nav {
     height: 100%;
 }
@@ -75,11 +72,13 @@ main {
     height: 100dvh;
 }
 h2 {
-    font-size: 4rem;
+    font-size: 3rem;
+}
+p {
+    font-size: 1.5rem;
 }
 #profile_pic {
     position: relative;
-    top: 3.5rem;
     width: 250px;
     height: 250px;
     border-radius: 100%;
@@ -99,8 +98,7 @@ h2 {
     display: grid;
     grid-template-columns: 75% 25%;
 }
-#main_container div.card p {
-    font-size: 2rem;
+#main_container #sobre_mim div.card p {
     padding-right: 1rem;
 }
 #sobre_mim, #conhecimentos, #projetos {
