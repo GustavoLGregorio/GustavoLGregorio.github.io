@@ -1,8 +1,22 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
     html, body {
+        height: 100%;
         overflow-y: scroll;
         overflow-x: hidden;
+    }
+    main {
+        width: 100%;
+    }
+    h1 {
+        color: #fff;
+        height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        letter-spacing: 0.25rem;
     }
     h2 {
         font-size: 2rem;
@@ -10,53 +24,65 @@
     p {
         font-size: 1rem;
     }
-    #main_container {
-        width: 100%;
-        height: auto;
+    #top_nav div p {
+        display: none;
+    }
+    div:has(img) {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #profile_pic {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+    }
+    #main_container .sobre_mim div.card .card-body {
+        display: block !important;
     }
     #main_container div.card {
-        width: 500px;
-        color: #fff;
-        position: relative;
-        top: 3rem;
-        background: #FF204E;
-        border-radius: 1rem;
-        box-shadow: 15px 15px 4px 5px rgba(0, 0, 0, 0.25);
+        top: 0;
+        max-height: none;
+        margin-bottom: 4rem;
     }
-    #container #sobre_mim div.card .card-body {
+    #main_container .sobre_mim div.card .card-body {
         display: grid;
         grid-template-columns: 75% 25%;
     }
-    #profile_pic {
-        position: relative;
-        top: 3.5rem;
-        width: 250px;
-        height: 250px;
-        border-radius: 100%;
-        overflow: hidden;
-        outline: 1px solid green;
-    }
-    #container div.card p {
-        font-size: 1rem;
+    #main_container .sobre_mim div.card p {
         padding-right: 1rem;
     }
-    #main_container .card {
-        max-height: none;
+    .sobre_mim, .conhecimentos, .projetos {
+        height: auto;
+    }
+    /*container de navegacao*/
+    #main_container {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: 500ms ease;
     }
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (max-width: 768px) {
-
+@media (min-width: 577px) {
+    h1 {
+        display: none;
+    }
+    #main_container div.card {
+        top: 3rem;
+        max-height: 800px;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (max-width: 992px) {
+@media (min-width: 769px) {
 
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
-@media (max-width: 1200px) {
+@media (min-width: 993px) {
 
 }
 

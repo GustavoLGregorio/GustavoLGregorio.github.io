@@ -36,17 +36,45 @@ header {
     border-top: 4px ridge #FF204E;
     border-bottom: 4px ridge #FF204E;
 
-    box-shadow: 0px 10px 50px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.4);
+    transition: 300ms ease;
+}
+header.neon-effect {
+    box-shadow:
+      0 0 7px #fff,
+      0 0 15px #fff,
+      0 0 21px rgb(5, 0, 255),
+      0 0 42px rgb(10, 0, 255),
+      0 0 82px rgb(20, 0, 255),
+      0 0 92px rgb(30, 0, 255),
+      0 0 102px rgb(40, 0, 255),
+      0 0 151px rgb(50, 0, 255);
+      transition: 300ms ease;
+}
+#top_nav ul {
+    margin-left: 0 !important;
 }
 #top_nav ul li {
     border-radius: 0.5rem;
     transition: 200ms ease-in-out;
 }
-#top_nav ul li:hover {
+#top_nav ul li:has(button):hover {
     border: 1px solid #00fff9;
     transform: scale(1.1);
 }
-#top_nav ul button {
+#top_nav div p {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    letter-spacing: 0.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 200ms ease;
+}
+#top_nav div p:hover {
+    color: #FF204E;
+}
+#top_nav ul li button {
     background: none;
     border: none;
     padding: 0.75rem 1rem;
@@ -83,7 +111,6 @@ p {
     height: 250px;
     border-radius: 100%;
     overflow: hidden;
-    outline: 1px solid green;
 }
 #main_container div.card {
     color: #fff;
@@ -94,14 +121,17 @@ p {
     border-radius: 1rem;
     box-shadow: 15px 15px 4px 5px rgba(0, 0, 0, 0.25);
 }
-#main_container #sobre_mim div.card .card-body {
+#main_container .sobre_mim div.card .card-body {
     display: grid;
     grid-template-columns: 75% 25%;
 }
-#main_container #sobre_mim div.card p {
+#main_container .sobre_mim div.card p {
     padding-right: 1rem;
 }
-#sobre_mim, #conhecimentos, #projetos {
+#main_container .container-md {
+    height: auto;
+}
+.sobre_mim, .conhecimentos, .projetos {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,7 +163,7 @@ p {
 .fa-php {
     color: purple;
 }
-#conhecimentos i {
+.conhecimentos i {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,16 +173,4 @@ p {
     height: 100px;
     border-radius: 20rem;
     font-size: 5rem;
-}
-
-header.neon-effect {
-    box-shadow:
-      0 0 7px #fff,
-      0 0 15px #fff,
-      0 0 21px rgb(5, 0, 255),
-      0 0 42px rgb(10, 0, 255),
-      0 0 82px rgb(20, 0, 255),
-      0 0 92px rgb(30, 0, 255),
-      0 0 102px rgb(40, 0, 255),
-      0 0 151px rgb(50, 0, 255);
 }
