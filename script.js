@@ -32,7 +32,7 @@ function moverCarousel() {
         MAIN_CONTAINER.style.right = carrousel_value + "%"
     })
 }
-moverCarousel()
+//moverCarousel()
 
 
 setInterval(() => {

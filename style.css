@@ -105,18 +105,12 @@ h2 {
 p {
     font-size: 1.5rem;
 }
-#profile_pic {
-    position: relative;
-    width: 250px;
-    height: 250px;
-    border-radius: 100%;
-    overflow: hidden;
-}
+
 #main_container div.card {
     color: #fff;
     position: relative;
     top: 3rem;
-    max-height: 800px;
+    /*max-height: 800px;*/
     background: #FF204E;
     border-radius: 1rem;
     box-shadow: 15px 15px 4px 5px rgba(0, 0, 0, 0.25);
@@ -124,6 +118,19 @@ p {
 #main_container .sobre_mim div.card .card-body {
     display: grid;
     grid-template-columns: 75% 25%;
+}
+#profile_pic {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    overflow: hidden;
+}
+#profile_pic img {
+    width: 100%;
+    height: 100%;
 }
 #main_container .sobre_mim div.card p {
     padding-right: 1rem;
@@ -137,6 +144,9 @@ p {
     justify-content: center;
     width: 100%;
     height: 100%;
+}
+.sobre_mim p:last-of-type, .conhecimentos p:last-of-type, .projetos p:last-of-type {
+    margin-bottom: 0;
 }
 /*container de navegacao*/
 #main_container {
