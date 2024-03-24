@@ -31,30 +31,21 @@
         width: 100%;
     }
     #profile_pic {
-        height: 100%;
+        width: 100%;
         display: flex;
-        justify-content: center;
         align-items: center;
-    }
-    #profile_pic img {
+        justify-content: center;
         width: 200px;
         height: 200px;
-        overflow: hidden;
-    }
-    #main_container .sobre_mim div.card .card-body {
-        display: block !important;
+        grid-row: 2;
     }
     #main_container div.card {
         top: 0;
         max-height: none;
         margin-bottom: 4rem;
     }
-    #main_container .sobre_mim div.card .card-body {
-        display: grid;
-        grid-template-columns: 75% 25%;
-    }
-    #main_container .sobre_mim div.card p {
-        padding-right: 1rem;
+    #main_container .sobre_mim div.card p:last-of-type {
+        padding-bottom: 1rem;
     }
     .sobre_mim, .conhecimentos, .projetos {
         height: auto;
@@ -65,6 +56,14 @@
         width: 100%;
         height: 100%;
         transition: 500ms ease;
+    }
+    #logos img {
+        width: 66px;
+        height: auto;
+    }
+    header {
+        position: absolute;
+        bottom: 0;
     }
 }
 
@@ -84,8 +83,19 @@
         width: 250px;
         height: 250px;
     }
+    #top_nav ul li:hover {
+        transform: scale(1.1);
+    }
+    #logos img {
+        width: 96px;
+        height: auto;
+    }
+        header {
+        position: absolute;
+        top: 0;
+    }
 }
-@media (max-width: 679px) {
+@media (min-width: 679px) {
     #profile_pic {
         width: 200px;
         height: 200px;
@@ -93,7 +103,13 @@
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
+    #top_nav ul li button {
+        letter-spacing: 0.125rem;
+    }
+    header {
+        height: 5rem;
+    }
     #main_container .sobre_mim div.card .card-body {
         grid-template-columns: 60% 40%;
     }
@@ -101,6 +117,9 @@
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 991px) {
+    #top_nav ul li a {
+        letter-spacing: 0.25rem;
+    }
     #main_container .sobre_mim div.card .card-body {
         grid-template-columns: 70% 30%;
     }

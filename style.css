@@ -19,7 +19,7 @@ html {
     background: #00224D /*hsl(275.29, 100%, 0%, 0.5)*/;
 }
 body {
-    background: url("img/noise.png") /*linear-gradient(135deg, hsl(257.18, 100%, 50%) -40%, hsl(314.59, 100%, 50%))*/;
+    background: url("content/img/noise.png") /*linear-gradient(135deg, hsl(257.18, 100%, 50%) -40%, hsl(314.59, 100%, 50%))*/;
     color: #ccc;
 }
 /*** </fim>
@@ -58,13 +58,8 @@ header.neon-effect {
     border-radius: 0.5rem;
     transition: 200ms ease-in-out;
 }
-#top_nav ul li:has(button):hover {
+#top_nav ul li:hover {
     border: 1px solid #00fff9;
-    transform: scale(1.1);
-}
-#top_nav ul li button a {
-    text-decoration: none;
-    color: inherit;
 }
 #top_nav div p {
     padding: 0.75rem 1rem;
@@ -83,7 +78,6 @@ header.neon-effect {
     border: none;
     padding: 0.75rem 1rem;
     font-size: 1rem;
-    letter-spacing: 0.25rem;
     font-weight: 600;
     text-transform: uppercase;
     color: #00b8ff;
@@ -121,7 +115,6 @@ p {
 }
 #main_container .sobre_mim div.card .card-body {
     display: grid;
-    grid-template-columns: 75% 25%;
 }
 #profile_pic {
     display: flex;
@@ -131,6 +124,7 @@ p {
     justify-self: center;
     border-radius: 100%;
     overflow: hidden;
+    box-shadow: 4px 4px 10px 8px rgba(0, 0, 0, 0.2);
 }
 #profile_pic img {
     width: 100%;
@@ -164,27 +158,3 @@ p {
 
 /*** </fim>
 */
-
-.fa-html5 {
-    color: orange;
-}
-.fa-css3-alt {
-    color: lightseagreen;
-}
-.fa-square-js {
-    color: yellow;
-}
-.fa-php {
-    color: purple;
-}
-.conhecimentos i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 20rem;
-    font-size: 5rem;
-}
