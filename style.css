@@ -25,8 +25,6 @@ header {
     background: #5D0E41;
     width: 100%;
     height: initial;
-    position: fixed;
-    bottom: 0;
     z-index: 1;
     border-top: 4px ridge #FF204E;
     border-bottom: 4px ridge #FF204E;

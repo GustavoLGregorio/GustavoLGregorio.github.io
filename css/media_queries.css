@@ -37,6 +37,7 @@
         height: auto;
     }
     header {
+        position: fixed;
         top: 0;
         height: 4.5rem;
     }
