@@ -1,20 +1,17 @@
-/*** <inicio> reset e criar viewport
-*/
+/*    reset e criar viewport    */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 html, body {
-    width: 100dvw;
+    width: 100%;
     height: 100dvh;
     overflow: hidden;
+    overflow-y: visible;
 }
-/*** </fim>
-*/
 
-/*** <inicio> background e cores
-*/
+/*    backgrounds e cores    */
 html {
     background: #00224D /*hsl(275.29, 100%, 0%, 0.5)*/;
 }
@@ -22,23 +19,23 @@ body {
     background: url("content/img/noise.png") /*linear-gradient(135deg, hsl(257.18, 100%, 50%) -40%, hsl(314.59, 100%, 50%))*/;
     color: #ccc;
 }
-/*** </fim>
-*/
 
-/*** <inicio> cabecalho e barra de navegação principal
-*/
+/*    cabeçalho e barra de navegação principal    */
 header {
     background: #5D0E41;
     width: 100%;
-    position: fixed;
+    height: initial;
+    position: absolute;
+    bottom: 0;
     z-index: 1;
-
     border-top: 4px ridge #FF204E;
     border-bottom: 4px ridge #FF204E;
-
     box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.4);
     transition: 300ms ease;
 }
+    #top_nav {
+        height: auto;
+    }
 header.neon-effect {
     box-shadow:
       0 0 7px #fff,
@@ -51,17 +48,18 @@ header.neon-effect {
       0 0 151px rgb(50, 0, 255);
       transition: 300ms ease;
 }
-#top_nav ul {
+
+header nav ul {
     margin-left: 0 !important;
 }
-#top_nav ul li {
+header nav ul li {
     border-radius: 0.5rem;
     transition: 200ms ease-in-out;
 }
-#top_nav ul li:hover {
+header nav ul li:hover {
     border: 1px solid #00fff9;
 }
-#top_nav div p {
+header nav div p {
     padding: 0.75rem 1rem;
     margin-bottom: 0;
     font-size: 1rem;
@@ -70,10 +68,11 @@ header.neon-effect {
     text-transform: uppercase;
     transition: 200ms ease;
 }
-#top_nav div p:hover {
+header nav div p:hover {
     color: #FF204E;
 }
-#top_nav ul li button {
+header nav div ul li button {
+    text-align: start;
     background: none;
     border: none;
     padding: 0.75rem 1rem;
@@ -81,80 +80,86 @@ header.neon-effect {
     font-weight: 600;
     text-transform: uppercase;
     color: #00b8ff;
+    width: 100%;
 }
-#top_nav ul button:hover {
+header nav div ul li button:hover {
     color: #00fff9;
 }
-nav {
-    height: 100%;
-}
-/*** </fim>
-*/
 
-/*** <inicio> conteudo principal
-*/
+/*    conteudo principal    */
 main {
     width: 100%;
+}
+h1 {
+    color: #fff;
     height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.25rem;
 }
 h2 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 p {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    padding-bottom: 1rem;
 }
-
+main #main_container {
+    display: block;
+    transition: 500ms ease;
+}
 #main_container div.card {
     color: #fff;
     position: relative;
-    top: 3rem;
-    /*max-height: 800px;*/
     background: #FF204E;
     border-radius: 1rem;
     box-shadow: 15px 15px 4px 5px rgba(0, 0, 0, 0.25);
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
-#main_container .sobre_mim div.card .card-body {
+
+#main_container #conteudo_sobre_mim div.card .card-body {
     display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr;
 }
-#profile_pic {
+#main_container #conteudo_sobre_mim div.card .card-body .card-text > p:last-of-type {
+    padding-bottom: 1rem;
+}
+#main_container #conteudo_sobre_mim #profile_pic {
     display: flex;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     align-self: center;
     justify-self: center;
     border-radius: 100%;
     overflow: hidden;
     box-shadow: 4px 4px 10px 8px rgba(0, 0, 0, 0.2);
 }
-#profile_pic img {
+#main_container #conteudo_sobre_mim #profile_pic img {
     width: 100%;
     height: 100%;
 }
-#main_container .sobre_mim div.card p {
-    padding-right: 1rem;
+
+#main_container div.card {
+    height: 100%;
 }
-#main_container .container-md {
-    height: auto;
-}
-.sobre_mim, .conhecimentos, .projetos {
+#conteudo_sobre_mim, #conteudo_conhecimentos, #conteudo_projetos {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
 }
-.sobre_mim p:last-of-type, .conhecimentos p:last-of-type, .projetos p:last-of-type {
-    margin-bottom: 0;
+#main_container p:last-of-type {
+    padding-bottom: 0;
 }
-/*container de navegacao*/
-#main_container {
-    display: flex;
-    position: relative;
-    right: 0%;
-    width: 300%;
-    height: 100%;
-    transition: 500ms ease;
-}
+/*    container do carrossel de navegação    */
 
-/*** </fim>
-*/
+
+main #logos img {
+    width: 66px;
+    height: auto;
+}
