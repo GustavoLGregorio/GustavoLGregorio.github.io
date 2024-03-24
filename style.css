@@ -9,6 +9,7 @@ html, body {
     height: 100dvh;
     overflow: hidden;
     overflow-y: visible;
+    margin-bottom: 5rem;
 }
 
 /*    backgrounds e cores    */
@@ -90,7 +91,7 @@ main {
 }
 h1 {
     color: #fff;
-    height: 100dvh;
+    height: 95dvh;
     display: flex;
     align-items: center;
     justify-content: center;
