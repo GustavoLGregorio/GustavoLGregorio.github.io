@@ -156,9 +156,6 @@ main #main_container {
 #main_container p:last-of-type {
     padding-bottom: 0;
 }
-/*    container do carrossel de navegação    */
-
-
 main #logos img {
     width: 66px;
     height: auto;
