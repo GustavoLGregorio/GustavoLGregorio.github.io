@@ -115,7 +115,7 @@ main #main_container {
     color: #fff;
     position: relative;
     background: #FF204E;
-    background: linear-gradient(to bottom, #FF204E, #610D1D 150%);
+    background: linear-gradient(to bottom, #b31637 , #FF204E 80%, #b31637 );
     border-radius: 1rem;
     box-shadow: 15px 15px 4px 5px rgba(0, 0, 0, 0.25);
     margin-top: 1rem;
@@ -126,7 +126,7 @@ main #main_container {
     grid-template-rows: auto 1fr;
 }
 #main_container #conteudo_sobre_mim div.card .card-body .card-text > p:last-of-type {
-    padding-bottom: 1rem;
+    padding-bottom: 0;
 }
 #main_container #conteudo_sobre_mim #profile_pic {
     display: flex;
