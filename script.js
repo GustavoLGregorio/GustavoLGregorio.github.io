@@ -11,6 +11,7 @@ const CONTEUDO_PROJETOS = document.getElementById("conteudo_projetos")
 let largura = window.innerWidth
 let altura = window.innerHeight
 
+//  interações de movimento para dispositivos moveis/telas pequenas
 if(largura < 576) {
     //  clicar nos botões faz aparecer os conteudos respectivos, funcionamento inspirado em href="#id"
     BUTTON_SOBRE_MIM.addEventListener("click", () => {
@@ -41,6 +42,7 @@ if(largura < 576) {
     })
 }
 
+//  função com ações referentes ao movimento do "carrossel" de conteudo para telas grandes
 function moverCarousel() {
     //  variavel para posição do #main_container (right:)
     let carrousel_value = 0
@@ -80,7 +82,3 @@ moverCarousel()
 setInterval(() => {
     document.querySelector("header").classList.toggle("neon-effect")
 }, 1500);
-
-
-
-
