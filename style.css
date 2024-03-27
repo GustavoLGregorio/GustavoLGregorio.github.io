@@ -1,3 +1,33 @@
+/*    fontes    */
+@font-face {
+    font-family: Poppins;
+    src: url("content/fonts/Poppins-Regular.woff");
+}
+@font-face {
+    font-family: "Poppins Thin";
+    src: url("content/fonts/Poppins-Thin.woff");
+}
+@font-face {
+    font-family: "Poppins Light";
+    src: url("content/fonts/Poppins-Light.woff");
+}
+@font-face {
+    font-family: Roboto;
+    src: url("content/fonts/Roboto-Regular.woff");
+}
+@font-face {
+    font-family: "Roboto Thin";
+    src: url("content/fonts/Roboto-Thin.woff");
+}
+h1, h2, h3 {
+    font-family: "Roboto Thin";
+    font-weight: 600;
+}
+p {
+    font-family: "Poppins Thin";
+    font-weight: 600;
+}
+
 /*    reset e criar viewport    */
 * {
     box-sizing: border-box;
@@ -46,7 +76,13 @@ header.neon-effect {
       0 0 151px rgb(50, 0, 255);
       transition: 300ms ease;
 }
-
+header nav a.navbar-brand {
+    height: 100%;
+    width: 3.25rem;
+}
+header nav a.navbar-brand img {
+    height: 100%;
+}
 header nav ul {
     margin-left: 0 !important;
 }
@@ -58,6 +94,7 @@ header nav ul li:hover {
     border: 1px solid #00fff9;
 }
 header nav div p {
+    font-family: inherit;
     padding: 0.75rem 1rem;
     margin-bottom: 0;
     font-size: 1rem;
@@ -115,7 +152,7 @@ main #main_container {
     color: #fff;
     position: relative;
     background: #FF204E;
-    background: linear-gradient(to bottom, #b31637 , #FF204E 80%, #b31637 );
+    background: linear-gradient(to bottom, #FF204E 10%, #b31637 );
     border-radius: 1rem;
     box-shadow: 15px 15px 4px 5px rgba(0, 0, 0, 0.25);
     margin-top: 1rem;
