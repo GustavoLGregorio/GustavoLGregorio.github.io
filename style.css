@@ -69,9 +69,9 @@ header nav a.navbar-brand {
 header nav a.navbar-brand img {
     height: inherit;
 }
-    #top_nav {
-        height: auto;
-    }
+#top_nav {
+    height: auto;
+}
 header.neon-effect {
     box-shadow:
       0 0 7px #fff,
@@ -137,6 +137,7 @@ h1 {
 }
 h2 {
     font-size: 2rem;
+    text-align: center;
 }
 p {
     font-size: 1rem;
@@ -193,6 +194,38 @@ main #main_container {
 #main_container p:last-of-type {
     padding-bottom: 0;
 }
+
+
+
+#conteudo_projetos .row a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+#conteudo_projetos a img {
+    width: 100%;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+#conteudo_projetos a .projetos-texto {
+    padding: 1rem;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem 0.5rem 0 0;
+    opacity: 1;
+    top: 100%;
+    transition: ease-in 250ms;
+}
+#conteudo_projetos a:hover .projetos-texto {
+    opacity: 1;
+}
+#conteudo_projetos a .projetos-texto > p {
+    margin-bottom: 0rem;
+}
+*/
+#conteudo_projetos h3 {
+    font-size: 1.3rem;
+}
+
 main #logos img {
     width: 66px;
     height: auto;
@@ -282,6 +315,29 @@ main #logos img {
     }
     header nav div ul li button {
         letter-spacing: 0.125rem;
+    }
+
+    #conteudo_projetos a img {
+        border-radius: 0.5rem;
+    }
+    #conteudo_projetos a .projetos-texto {
+        position: absolute;
+        padding: 1rem;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 0.5rem;
+        opacity: 0;
+        top: 0;
+        transition: ease-in 250ms;
+    }
+    #conteudo_projetos a:hover .projetos-texto {
+        opacity: 1;
+    }
+    #conteudo_projetos a .projetos-texto > p {
+        margin-bottom: 0rem;
+    }
+    #conteudo_projetos p {
+        font-size: 1.2rem;
     }
 }
 /* Aumentar imagem de perfil em telas maiores */

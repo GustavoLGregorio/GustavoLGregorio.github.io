@@ -45,6 +45,7 @@ if(largura < 576) {
 //  função com ações referentes ao movimento do "carrossel" de conteudo para telas grandes
 function moverCarousel() {
     //  variavel para posição do #main_container (right:)
+    /*
     let carrousel_value = 0
 
     //  movimento automático, valor padrão 8000ms
@@ -59,6 +60,7 @@ function moverCarousel() {
     } else {
         carrousel_value = 0
     }
+    */
 
     //  mover o carousel com os botões da navbar
     if(largura > 576) {
