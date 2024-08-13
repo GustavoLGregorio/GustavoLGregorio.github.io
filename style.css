@@ -47,7 +47,7 @@ html {
     background: #00224D /*hsl(275.29, 100%, 0%, 0.5)*/;
 }
 body {
-    background: url("content/img/noise.png") /*linear-gradient(135deg, hsl(257.18, 100%, 50%) -40%, hsl(314.59, 100%, 50%))*/;
+    background: url("content/img/noise.png");
     color: #ccc;
 }
 
@@ -195,9 +195,7 @@ main #main_container {
     padding-bottom: 0;
 }
 
-
-
-#conteudo_projetos .row a {
+#conteudo_projetos a {
     color: #fff;
     text-decoration: none;
     text-align: center;
@@ -224,6 +222,19 @@ main #main_container {
 */
 #conteudo_projetos h3 {
     font-size: 1.3rem;
+}
+.em-construcao {
+    position: absolute;
+    left: -2rem;
+    width: calc(100% + 5rem);
+    height: 2rem;
+    background: var(--bs-warning);
+    top: 13.5rem;
+    left: -2rem;
+}
+#conteudo_projetos a div.position-relative:has(.em-construcao) {
+    overflow: hidden;
+    border-radius: 0.5rem;
 }
 
 main #logos img {
@@ -303,6 +314,9 @@ main #logos img {
     .sumir {
         opacity: 1;
     }
+    .em-construcao {
+        top: 18rem;
+    }
 }
 
 /* Dispositivos médios (tablets, e acima de 768px) */
@@ -339,6 +353,16 @@ main #logos img {
     #conteudo_projetos p {
         font-size: 1.2rem;
     }
+    #conteudo_projetos h3 {
+        font-size: 1.25rem;
+    }
+    #conteudo_projetos p {
+        font-size: 1rem;
+    }
+    .em-construcao {
+        top: 4.5rem;
+        transform: rotateZ(330deg);
+    }
 }
 /* Aumentar imagem de perfil em telas maiores */
 @media (min-width: 679px) {
@@ -359,5 +383,18 @@ main #logos img {
     header nav div p {
         display: block;
         margin: 0 auto;
+    }
+    .em-construcao {
+        top: 4rem;
+    }
+}
+@media (min-width: 1200px) {
+    .em-construcao {
+        top: 5rem;
+    }
+}
+@media (min-width: 1400px) {
+    .em-construcao {
+        top: 6rem;
     }
 }
