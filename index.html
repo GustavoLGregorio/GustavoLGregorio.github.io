@@ -1,149 +1,139 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
-    <title>Meu portfólio</title>
-    <link rel="shortcut icon" href="content/logos/g_logo.svg" type="image/x-icon">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- font-awesome -->
-    <script src="https://kit.fontawesome.com/c9e475ae7e.js" crossorigin="anonymous"></script>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meu Portfólio</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+        <script src="https://kit.fontawesome.com/c9e475ae7e.js" crossorigin="anonymous" defer></script>
+        <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js" defer></script>
 
-    <!-- estilo customizado -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/media_queries.css">
-    <!-- script customizado -->
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <!-- cabeçalho com navegação de conteúdos -->
-    <header class="fixed-top d-flex align-content-center neon-effect" id="header">
-        <nav class="navbar navbar-expand-sm navbar-dark container-md px-4 px-md-0">
-            <a class="navbar-brand" href="index.html">
-                <img class="bg-warning rounded-5" src="content/logos/g_logo.svg" alt="Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_nav">
-                <i class="navbar-toggler-icon"></i>
-            </button>
-            <div class="collapse navbar-collapse d-sm-flex justify-content-end" id="collapse_nav">
-                <p class="nav-item text-start">Meu portfólio</p>
-                <ul class="navbar-nav gap-md-4">
-                    <li class="nav-item">
-                        <button class="neon-effect" type="button" id="sobre_mim">Sobre mim</button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="neon-effect" type="button" id="conhecimentos">Conhecimentos</button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="neon-effect" type="button" id="projetos">Projetos</button>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <!-- conteúdo principal da página -->
-    <main>
-        <h1 class="display-1 scroll_animar text-center text-uppercase">Meu portfólio</h1>
-        <div id="main_container">
-            <div class="sumir" id="conteudo_sobre_mim">
-                <div class="container">
-                    <div class="card">
-                        <h2 class="card-header">Sobre mim</h2>
-                        <div class="card-body">
-                            <div class="card-text">
-                                <p>
-                                    Olá! 👋
-                                </p>
-                                <p>
-                                    Meu nome é Gustavo, tenho 20 anos e estou estudando Analise e Desenvolvimento de Sistemas no Instituto Federal do Paraná.
-                                </p>
-                                <p>
-                                    Tenho como objetivo aprender e crescer na área de informática, já tendo conhecimentos e experiência com hardware, agora busco me aprofundar profissionalmente no Software.
-                                </p>
-                            </div>
-                            <div id="profile_pic">
-                                <img src="content/img/profile_pic.png" alt="Foto de Gustavo">
-                            </div>
+        <link rel="stylesheet" href="index.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body class="text-light">
+        <div id="home" class="vh-100 d-flex align-items-center">
+            <header class="d-flex align-items-center justify-content-center mb-md-5">
+                <div class="fixed-top d-flex align-content-center justify-content-center">
+                    <nav class="fixed-top navbar navbar-dark navbar-expand-md w-100 px-4 px-lg-0 d-md-flex justify-content-md-around">
+                        <div class="navbar-brand" id="container_foto">
+                            <img class="img-fluid" src="content/img/profile_pic.png" alt="">
                         </div>
-                    </div>
+                        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navegacao_lista">
+                            <i class="navbar-toggler-icon"></i>
+                        </button>
+                        <ul id="navegacao_lista" class="navbar-nav navbar-collapse collapse d-md-flex justify-content-md-end">
+                            <li class="nav-item"><a class="nav-link active" href="#home">home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#sobre">sobre</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#conhecimentos">conhecimentos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#projetos">projetos</a></li>
+                        </ul>
+                    </nav>
                 </div>
-            </div>
-            <div class="sumir" id="conteudo_conhecimentos">
-                <div class="container">
-                    <div class="card">
-                        <h2 class="card-header">Meus conhecimentos</h2>
-                        <div class="card-body">
-                            <div>
-                                <p>
-                                    Quando se trata de ferramentas e tecnologias, tenho prática com HTML, CSS (incluindo BootsTrap), JavaScript e PHP
-                                </p>
-                                <div class="d-flex justify-content-center gap-2 gap-md-3 flex-wrap pt-3 pt-md-0" id="logos">
-                                    <img src="content/logos/icons8-html-logo.svg" alt="Logo HTML5">
-                                    <img src="content/logos/icons8-css-logo.svg" alt="Logo CSS3">
-                                    <img src="content/logos/icons8-bootstrap-logo.svg" alt="Logo BootsTrap">
-                                    <img src="content/logos/icons8-javascript.svg" alt="Logo JS">
-                                    <img src="content/logos/Official PHP Logo.svg" alt="Logo PHP">
-                                    <img src="content/logos/icons8-mysql-logo.svg" alt="Logo MySQL">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sumir" id="conteudo_projetos">
-                <div class="container">
-                    <div class="card">
-                        <h2 class="card-header">Meus projetos</h2>
-                        <div class="card-body">
-                            <div class="d-grid">
-                                <div class="row row-gap-4">
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <a href="https://lixadoragregorio.com.br" target="_blank">
-                                            <div class="position-relative">
-                                                <div class="d-flex flex-column justify-content-center projetos-texto">
-                                                    <h3 class="">Lixadora Gregorio</h3>
-                                                    <p class="">É um site que fiz para a micro-empresa de lixamento de pisos de madeira que meu pai e tio possuem</p>
-                                                </div>
-                                                <img class="img-thumbnail" src="content/img/projeto_lixadora_gregorio.png" alt="Imagem da Home do site lixadoragregorio.com.br">
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <a href="#" style="cursor: default;">
-                                            <div class="position-relative">
-                                                <div class="em-construcao">Em construção!</div>
-                                                <div class="d-flex flex-column justify-content-center projetos-texto">
-                                                    <h3 class="">Projeto API</h3>
-                                                    <p class="">Projeto para demonstrar uso de API's em diferentes situações. Ainda em construção</p>
-                                                </div>
-                                                <img class="img-thumbnail" src="content/img/projeto_em_construcao.png" alt="">
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <a href="#" style="cursor: default;">
-                                            <div class="position-relative">
-                                                <div class="em-construcao">Em construção!</div>
-                                                <div class="d-flex flex-column justify-content-center projetos-texto">
-                                                    <h3 class="">Projeto Livraria</h3>
-                                                    <p class="">Projeto de livraria PDF feito em PHP e servidor em MySQL. Ainda em construção</p>
-                                                </div>
-                                                <img class="img-thumbnail" src="content/img/projeto_em_construcao.png" alt="">
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </header>
+            <div id="container_h1" class="">
+                <div>
+                    <h1>
+                        <span class="typer text-light transicao" data-words="Desenvolvedor web, Web designer" data-delay="100" data-deleteDelay="1000"></span>
+                        <span class="cursor"></span>
+                    </h1>
+                    <p class="text-light">Blogs, sites e sistemas</p>
                 </div>
             </div>
         </div>
-    </main>
-    
-    <!-- bootstrap -->
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-</body>
+        
+        <main class="px-4 px-lg-0">
+            <section class="" id="sobre">
+                <h2>Sobre</h2>
+                <div>
+                    <p>
+                        Meu nome é Gustavo, tenho 20 anos e estou estudando Analise e Desenvolvimento de Sistemas no Instituto Federal do Paraná (IFPR).
+                    </p>
+                    <p>
+                        Tenho como objetivo aprender e crescer na área de informática, já tendo conhecimentos e experiência com hardware, agora busco me aprofundar profissionalmente no Software.
+                    </p>
+                </div>
+            </section>
+
+            <section id="conhecimentos">
+                <h2>Conhecimentos</h2>
+                <div>
+                    <p>
+                        Além das ferramentas abaixo, tenho prática com design responsivo, uso de APIs, criação de API, desenvolvimento assíncrono e OO
+                    </p>
+                </div>
+                <div class="d-grid mt-3 mx-3">
+                    <div class="row">
+                        <div class="col-6">
+                            <p><i class="fa-brands fa-html5" style="color: #E34F26;"></i>html</p>
+                            <p><i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i>css</p>
+                            <p><i class="fa-brands fa-bootstrap" style="color: #7952B3;"></i>bootstrap</p>
+                        </div>
+                        <div class="col-6">
+                            <p><i class="fa-brands fa-js" style="color: #F7DF1E ;"></i>javascript</p>
+                            <p><i class="fa-brands fa-php" style="color: #777BB4 ;"></i>php</p>
+                            <p><i class="fa-solid fa-database" style="color: #4479A1 ;"></i>mysql</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="projetos">
+                <h2>Projetos</h2>
+                <div class="container px-0">
+                    <div class="row gap-3 row-gap-0 mx-0 px-0">
+                        <article class="col-md-4 col-lg-4">
+                            <div>
+                                <h3><a href="https://lixadoragregorio.com.br" target="_blank">Lixadora Gregorio</a></h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, assumenda? Perspiciatis a dignissimos similique eaque maxime aliquam quos nostrum officiis!
+                                </p>
+                            </div>
+                            <div>
+                                <img src="content/img/projeto_lixadora_gregorio.png" alt="">
+                                <div class="small">html &middot; css &middot; bootstrap &middot; javascript &middot; php</div>
+                            </div>
+                        </article>
+                        <article class="col-md-4 col-lg-4">
+                            <div>
+                                <h3><a href="http://gustavo-api.free.nf" target="_blank">Projeto APIs</a></h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque id molestias tempore totam culpa asperiores ipsum perferendis minima voluptates eaque!
+                                </p>
+                            </div>
+                            <div>
+                                <img src="content/img/projeto_lixadora_gregorio.png" alt="">
+                                <div class="small">html &middot; css &middot; javascript &middot; php</div>
+                            </div>
+                        </article>
+                        <article class="col-md-4 col-lg-4">
+                            <div>
+                                <h3><a href="#" target="_blank">Jogo da Forca</a></h3>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum cupiditate id molestias rerum accusantium harum iste? Sint culpa commodi veniam.
+                                </p>
+                            </div>
+                            <div>
+                                <img src="content/img/projeto_lixadora_gregorio.png" alt="">
+                                <div class="small">html &middot; css &middot; javascript</div>
+                            </div>
+                        </article>
+                        <article class="col-md-4 col-lg-4">
+                            <div>
+                                <h3><a href="#" target="_blank">Livraria PDF</a></h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quo reprehenderit cum consequatur architecto earum ullam impedit quas odio asperiores!
+                                </p>
+                            </div>
+                            <div>
+                                <img src="content/img/projeto_lixadora_gregorio.png" alt="">
+                                <div class="small">html &middot; css &middot; bootstrap &middot; javascript &middot; react.js &middot; node.js &middot; mysql</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
