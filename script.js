@@ -13,6 +13,13 @@ window.addEventListener( "DOMContentLoaded", () => {
     document.body.style.animationTimingFunction = "ease-in"
 } )
 
+
+
+
+
+
+
+
 const todo_h2 = document.querySelectorAll("h2")
 const todo_h3 = document.querySelectorAll("h3")
 const todo_p = document.querySelectorAll("p")
