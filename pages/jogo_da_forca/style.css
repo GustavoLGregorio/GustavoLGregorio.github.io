@@ -114,14 +114,10 @@ main {
     estilo referente a pagina inicial
 **/
 #pagina_inicial > * {
-    background: hsl(200, 20%, 50%);
     padding: 0 2rem;
 }
 #pagina_inicial header {
     border-radius: 0.5rem 0.5rem 0 0;
-}
-#pagina_inicial main {
-    border-radius: 0 0 0.5rem 0.5rem;
 }
 #pagina_inicial #container_botoes {
     height: 100%;
