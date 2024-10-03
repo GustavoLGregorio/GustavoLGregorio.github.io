@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Jogo da Forca</title>
+        <link rel="shortcut icon" href="content/favicon/icons8-pilar-grego-capital-96.png" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <script src="app.js" defer></script>
+
+    </head>
+    <body id="jogo">
+        <div>
+            <button id="voltar" type="button">&#8249;</button>
+            <span class="score"></span>
+        </div>
+
+        <header>
+            <h2>Tem <span id="tamanho_palavra"></span> letras e é um <span id="tipo_palavra"></span></h2>
+        </header>
+        <main>
+            <div id="hangman">
+                <img id="forca_vazia" src="content/hangman/06.svg" alt="">
+            </div>
+
+            <div id="espaco_letras">
+            </div>
+            
+            <div id="letras_usadas">
+                <span id="tem"></span>
+                <span id="nao_tem"></span>
+            </div>
+            <div id="container_alfabeto">
+                <button type="button">A</button>
+                <button type="button">B</button>
+                <button type="button">C</button>
+                <button type="button">D</button>
+                <button type="button">E</button>
+                <button type="button">F</button>
+                <button type="button">G</button>
+                <button type="button">H</button>
+                <button type="button">I</button>
+                <button type="button">J</button>
+                <button type="button">K</button>
+                <button type="button">L</button>
+                <button type="button">M</button>
+                <button type="button">N</button>
+                <button type="button">O</button>
+                <button type="button">P</button>
+                <button type="button">Q</button>
+                <button type="button">R</button>
+                <button type="button">S</button>
+                <button type="button">T</button>
+                <button type="button">U</button>
+                <button type="button">V</button>
+                <button type="button">W</button>
+                <button type="button">X</button>
+                <button type="button">Y</button>
+                <button type="button">Z</button>
+                
+                <!--
+                <div class="mover">
+                    <button type="button">A</button>
+                    <button type="button">B</button>
+                    <button type="button">C</button>
+                    <button type="button">D</button>
+                    <button type="button">E</button>
+                    <button type="button">F</button>
+                    <button type="button">G</button>
+                    <button type="button">H</button>
+                    <button type="button">I</button>
+                </div>
+                <div class="mover">
+                    <button type="button">J</button>
+                    <button type="button">K</button>
+                    <button type="button">L</button>
+                    <button type="button">M</button>
+                    <button type="button">N</button>
+                    <button type="button">O</button>
+                    <button type="button">P</button>
+                    <button type="button">Q</button>
+                    <button type="button">R</button>
+                </div>
+                <div class="mover">
+                    <button type="button">S</button>
+                    <button type="button">T</button>
+                    <button type="button">U</button>
+                    <button type="button">V</button>
+                    <button type="button">W</button>
+                    <button type="button">X</button>
+                    <button type="button">Y</button>
+                    <button type="button">Z</button>
+                    <button type="button">&ThinSpace;</button>
+                </div>
+                -->
+            </div>
+        </main>
+    </body>
+</html>

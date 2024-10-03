@@ -1,0 +1,6 @@
+{
+    "animais": ["gato", "cachorro", "leão", "tigre"],
+    "objetos": ["mesa", "cadeira", "computador", "lâmpada"],
+    "paises": ["Brasil", "Canadá", "Alemanha", "Japão"],
+    "filmes": ["Matrix", "Vingadores", "Titanic", "Gladiador"]
+}  
