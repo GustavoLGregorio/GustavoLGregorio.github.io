@@ -5,6 +5,7 @@
     --azul-medio: hsl(250, 80%, 15%);
     --rosa: hsl(300, 100%, 50%);
     --max-width: 1000px;
+    --main-max-width: 660px;
 
     --p-color: hsl(220, 20%, 70%);
     --branco: #f8f9fa;
@@ -82,11 +83,15 @@ header nav li a::after {
 header nav li a:not(.active):hover::after {
     width: 100%;
 }
+#container_foto {
+    height: 70px;
+}
 #container_foto img {
     width: 100%;
     max-width: 70px;
     border-radius: 100%;
     outline: 1px solid hsl(250, 80%, 20%);
+    transition: all 200ms ease;
 }
 #botao_tema {
     padding: 0;
@@ -110,6 +115,7 @@ header nav li a:not(.active):hover::after {
     z-index: 1;
 }
 #container_h1 > div {
+    display: block;
     background: hsl(250, 80%, 20%);
     padding: 1.5rem;
     border-radius: 0.5rem;
@@ -172,7 +178,7 @@ div p:last-of-type {
 
 /* container principal e padrões */
 main {
-    max-width: var(--max-width);
+    max-width: var(--main-max-width);
     margin: 0 auto;
 }
 main > section {
@@ -204,12 +210,13 @@ main > section img {
     margin-bottom: 2.5rem;
 }
 #projetos a {
-    color: hsl(300, 100%, 50%);
+    color: var(--branco);
     text-decoration: underline;
     text-underline-offset: 0.5rem;
+    transition: 100ms ease-in-out;
 }
 #projetos a:hover {
-    color: hsl(250, 100%, 50%);
+    color: var(--rosa);
 }
 #projetos img {
     width: 100%;
@@ -238,6 +245,48 @@ main > section img {
     font-variant: small-caps;
     font-weight: 100;
 }
+
+/*
+    classes de transições
+*/
+/* seleciona .efeito porém não quando tem .direita junto */
+main .efeito:not(:has(.direita)) {
+    position: relative;
+    left: -50%;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+}
+main .efeito:nth-of-type(2),
+main .efeito:nth-of-type(4),
+main .efeito:nth-of-type(6) {
+    position: relative;
+    left: 50%;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+}
+.aparecer {
+    position: relative;
+    opacity: 1 !important;
+    left: 0% !important;
+    right: 0%;
+    transition: all 500ms ease-in-out;
+}
+
+#container_h1.efeito::before, #container_h1.efeito::after {
+    animation: none ;
+}
+#container_h1.aparecer::before, #container_h1.aparecer::after {
+    animation: rodar 3s cubic-bezier(0, 0, 0, 0) infinite;
+}
+
+.aumentar {
+    position: absolute;
+    top: 45dvh;
+    scale: 5;
+    left: 50%;
+    translate: -50% 0%;
+}
+
 
 /* mediaqueries */
 /* mediaqueries para adequar o tamanho do h1 */
@@ -302,10 +351,6 @@ main > section img {
     body {
         font-size: 150%;
     }
-    #projetos article {
-        grid-template-rows: 250px auto;
-        max-width: 351px;
-    }
 }
 /* mediaquerie para lg */
 @media (min-width: 992px) {
@@ -314,6 +359,7 @@ main > section img {
         max-width: 309px;
     }
 }
+
 /* mediaquerie para xl */
 @media (min-width: 1200px) {
     h1 {
@@ -323,5 +369,17 @@ main > section img {
     }
     #projetos article {
         max-width: 322px;
+    }
+}
+
+@media (max-width: 1350px) {
+    body > * {
+        overflow: hidden !important;
+    }
+    #projetos .efeito {
+        left: -25%;
+    }
+    #projetos .efeito.direita {
+        left: 25%;
     }
 }

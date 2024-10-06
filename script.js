@@ -1,4 +1,6 @@
+// navegação ativa
 const nav_links = document.getElementById("navegacao_lista").querySelectorAll("a")
+const img_perfil = document.getElementById("container_foto").querySelector("img")
 
 nav_links.forEach(link => {
     link.addEventListener("click", () => {
@@ -7,22 +9,73 @@ nav_links.forEach(link => {
     })
 })
 
+// animação de entrada na pagina
 window.addEventListener( "DOMContentLoaded", () => {
     document.body.style.animation = "carregando_conteudo"
     document.body.style.animationDuration = "1200ms"
     document.body.style.animationTimingFunction = "ease-in"
 } )
 
-const todo_h2 = document.querySelectorAll("h2")
-const todo_h3 = document.querySelectorAll("h3")
-const todo_p = document.querySelectorAll("p")
+// dar zoom na foto de perfil
+img_perfil.addEventListener("click", () => {
+    if (img_perfil.classList.contains("aumentar")) {
+        img_perfil.classList.remove("aumentar")
+    } else {
+        img_perfil.classList.add("aumentar")
+    }
+})
 
-const largura = window.innerWidth
-const altura = window.innerHeight
 
-console.log(largura, altura)
-
-todo_p.forEach( p => {
-    //p.style.opacity = "0"
-} )
-
+function observadores() {
+    // efeito de scroll (utiliza a API IntersectionObserver)
+    if ("IntersectionObserver" in window) {
+        // seleciona elementos com a classe ".efeito"
+        const elementos = document.querySelectorAll(".efeito")
+    
+        // callback do objeto IntersectionObserver()
+        const callback = (entradas, observador) => {
+            // foreach para cada elemento observado
+            entradas.forEach( (entrada) => {
+                // reconhece a intersecção da viewport com o elemento
+                if (entrada.isIntersecting) {
+                    // vai receber o elemento 
+                    const data_target = entrada.target
+                    data_target.classList.add("aparecer")
+                } else {
+                    const data_target = entrada.target
+                    data_target.classList.remove("aparecer")
+                }
+            })
+        }
+    
+        // opcoes que o IntersectionObserver recebe
+        const options = {
+            // indica a visualização de intersecção em relação a VP
+            root: null,
+            // porcentagem onde a intersecção começa a contar
+            // antes e depois do elemento
+            threshold: 0.20
+        }
+        // opção para threshold imediato (porcentagem zero)
+        const options2 = {
+            root: null,
+            threshold: 0
+        }
+        
+        // criação do objeto IntersectionObserver
+        const meu_observador = new IntersectionObserver(callback, options)
+        const meu_observador_imediato = new IntersectionObserver(callback, options2)
+        
+        // encontra os elementos e "diz" para o objeto observador
+        // "olhar" para cada elemento (roda o código da const "callback")
+        elementos.forEach( (elemento) => {
+            // encontra o elemento (seção) projetos e mostra ela imediatamente
+            if(elemento.id == "projetos") {
+                meu_observador_imediato.observe(elemento)
+            }
+            meu_observador.observe(elemento)
+        })
+        meu_observador_imediato.observe(document.querySelector("#container_h1"))
+    }
+}
+observadores()

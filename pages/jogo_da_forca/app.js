@@ -23,7 +23,7 @@ const img = document.createElement("img")
 const h3 = document.createElement("h3")
 const p = document.createElement("p")
 
-let animais = ["gato", "cachorro", "leão"]
+let animais = ["gato", "cachorro", "leao"]
 let objetos = ["cadeira", "mesa", "celular"]
 let palavras = [animais, objetos]
 
@@ -220,6 +220,7 @@ function pagina_jogo(tentativas = 6) {
     const pagina_jogo_div = pagina_jogo.appendChild(div)
     const botoes_alfabeto = document.getElementById("container_alfabeto").querySelectorAll("button")
     const tipo_palavra = document.getElementById("tipo_palavra")
+    const audio_jogo = document.getElementById("audio_jogo")
 
     // volta para a pagina inicial caso o jogador clique no botão (o score e palavra se mantem)
     botao_voltar.addEventListener("click", () => {
@@ -276,7 +277,9 @@ function pagina_jogo(tentativas = 6) {
         })
         window.addEventListener("keydown", escrever_letras)
 
+        // reconhece se a letra existe ou não na palavra
         function escrever_letras() {
+            // caso a letra exista
             if (array_palavra.includes(letra) && letra != "") {
                 container_tem_letra.innerText += letra
             } else if ((array_palavra.includes(letra)) == false && letra != "" && RegExp(/^[a-z]+$/).test(letra)) {
@@ -284,6 +287,14 @@ function pagina_jogo(tentativas = 6) {
                 tentativas--
                 // impede que as tentativas se tornem numeros negativos
                 tentativas <= 0 ? tentativas = 0 : tentativas = tentativas
+
+                // vibra caso erre a letra (precisa ter motor de vibração)
+                try {
+                    navigator.vibrate(50)
+                } catch (erro) {
+                    // caso não seja um aparelho com vibração
+                    console.info("Impossível acessar vibração/inexistente")
+                }
 
                 // reconhece e remove a imagem da forca vazia
                 if (hangman.querySelector("img").id = "forca_vazia") {
@@ -338,6 +349,12 @@ function pagina_jogo(tentativas = 6) {
                 // cria a mensagem de vitoria
                 pagina_jogo_div.classList.add("ganhou")
                 pagina_jogo_div.appendChild(h3).innerText = "Acertou!"
+
+                // cria o audio de vitoria
+                audio_jogo.src = "content/audio/correct.mp3"
+                audio_jogo.autoplay = false
+                audio_jogo.play()
+
                 // mostra quantos pontos serão aumentados (em base de dificuldade)
                 if (v_dificuldade == "NORMAL" || v_dificuldade == "") {
                     pagina_jogo_div.appendChild(p).innerText = "+1 ponto"
@@ -380,6 +397,10 @@ function pagina_jogo(tentativas = 6) {
                 pagina_jogo_div.classList.add("perdeu")
                 pagina_jogo_div.appendChild(h3).innerText = "Você perdeu!"
                 pagina_jogo_div.appendChild(p).innerText = "Tente novamente"
+
+                // cria o audio de derrota
+                audio_jogo.src = "content/audio/wrong.mp3"
+                audio_jogo.play()
 
                 // escuta ofinal da animação "fade_in"
                 pagina_jogo_div.addEventListener("animationend", () => {
