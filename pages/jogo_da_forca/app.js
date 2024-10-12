@@ -23,41 +23,19 @@ const img = document.createElement("img")
 const h3 = document.createElement("h3")
 const p = document.createElement("p")
 
-let animais = ["gato", "cachorro", "leao"]
-let objetos = ["cadeira", "mesa", "celular"]
-let palavras = [animais, objetos]
+/**
+ * arrays com as palavras (fiz hardcoded mas seria possível fazer fetch de um
+ * arquivo JSON (ou servidor caso não fosse colocar em uma página estática),
+ * porém aumentaria demais a complexidade do projeto por
+ * ter que desenvolver tudo de maneira assincrona)
+**/
+let animais = ["gato", "cao", "cavalo", "peixe", "rato", "urso", "lobo", "cobra", "leao", "pato", "puma", "suamae", "coelho", "falcao", "gaivota", "tigre", "burro", "cabra", "golfinho", "elefante", "iguana", "ra", "corvo", "sapo", "pinguim", "tatu", "porco", "hamster", "foca", "lagarto"]
+let objetos = ["cadeira", "mesa", "copo", "faca", "caneta", "papel", "livro", "telefone", "carro", "tela", "chave", "banco", "relogio", "lanterna", "guitarra", "cama", "caixa", "espelho", "ventilador", "caderno", "mesa", "pincel", "notebook", "teclado", "mouse", "escova", "pente", "tablet", "piano", "radar"]
+let filmes = ["avatar", "titanic", "frozen", "joker", "gladiador", "bravura", "mulan", "rocky", "corra", "aliens", "moana", "creed", "batman", "matrix", "ali", "hannibal", "predador", "zootopia", "bonsai", "deadpool", "jumanji", "tropaelite", "amnesia", "armageddon", "godzilla", "scarface", "rush", "jumanji", "thor", "unbroken"]
+let paises = ["brasil", "chile", "franca", "canada", "japao", "egito", "india", "italia", "alemanha", "mexico", "suecia", "noruega", "argentina", "russia", "polonia", "haiti", "turquia", "coreia", "grecia", "libano", "filipinas", "vietna", "colombia", "catar", "mali", "nepal", "bangladesh", "eslovenia", "suica", "singapura"]
 
 // criação de numeros aleatorios que correspondem a palavra da forca
-const rand_item = Math.ceil(Math.random() * (animais.length + objetos.length))
-
-async function carregar_palavras() {
-    try {
-      const resposta = await fetch('palavras.json');
-      const dados = await resposta.json();
-  
-      // Colocando os valores de cada categoria em arrays separados
-      const animais = dados.animais;
-      const objetos = dados.objetos;
-      const paises = dados.paises;
-      const filmes = dados.filmes;
-  
-      // Aqui você pode retornar ou manipular os arrays conforme a lógica da sua aplicação
-      return { animais, objetos, paises, filmes };
-
-    } catch (erro) {
-      console.error('Erro ao carregar o arquivo .json:', erro);
-    }
-  }
-  
-  // Chamando a função e utilizando os arrays
-  carregar_palavras().then(({ animais, objetos, paises, filmes }) => {
-    // Agora você pode usar os arrays como quiser
-    console.log('Lista de animais:', animais);
-    console.log('Lista de objetos:', objetos);
-    console.log('Lista de países:', paises);
-    console.log('Lista de filmes:', filmes);
-  });
-
+const rand_item = Math.round(Math.random() * 120)
 
 // containers (elementos html) que interagem entre a pagina inicial e o jogo
 const container_botoes = document.getElementById("container_botoes")
@@ -68,8 +46,6 @@ const container_score = document.querySelector(".score")
 
 const n_dificuldade = 'dificuldade'
 let v_dificuldade = localStorage.getItem(n_dificuldade) || ""
-
-console.info(v_dificuldade)
 
 // n = nome; v = valor;
 // nome para o highscore no localStorage
@@ -241,15 +217,25 @@ function pagina_jogo(tentativas = 6) {
     function retorna_palavra(palavra) {
         let i = null // variavel auxiliar
 
-        if (palavra_index <= palavras[0].length) {
-            i = palavra_index - 1
-            palavra = palavras[0][i]
+        if (palavra_index >= 0 && palavra_index < 30) {
+            i = palavra_index
+            palavra = animais[i]
             tipo_palavra.innerText = "Animal"
         }
-        if (palavra_index > palavras[0].length) {
-            i = (palavra_index - animais.length) - 1
-            palavra = palavras[1][i]
+        else if (palavra_index >= 30 && palavra_index < 60) {
+            i = palavra_index - 30
+            palavra = objetos[i]
             tipo_palavra.innerText = "Objeto"
+        }
+        else if (palavra_index >= 60 && palavra_index < 90) {
+            i = palavra_index - 60
+            palavra = filmes[i]
+            tipo_palavra.innerText = "Filme"
+        }
+        else if (palavra_index >= 90 && palavra_index < 120) {
+            i = palavra_index - 90
+            palavra = paises[i]
+            tipo_palavra.innerText = "País"
         }
         return palavra
     }
