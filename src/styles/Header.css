@@ -1,0 +1,6 @@
+nav li a {
+    @apply block py-3 md:px-3 md:py-0
+}
+nav li a:hover {
+    @apply text-[hsl(0,0%,40%)]
+}

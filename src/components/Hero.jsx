@@ -5,6 +5,5 @@ export default function Hero() {
         <h1 className="text-[3rem]">Desenvolvedor Web</h1>
       </div>
     </section>
-    
   );
 }
