@@ -9,9 +9,11 @@ export default function Header() {
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    const widthId = window.addEventListener("resize", () => {
-      setWidth(window.innerWidth);
-    });
+    if (typeof window !== undefined) {
+      const widthId = window.addEventListener("resize", () => {
+        setWidth(window.innerWidth);
+      });
+    }
 
     if (collapsed && width < 768) {
       navbar.current.style.top = "-500%";
