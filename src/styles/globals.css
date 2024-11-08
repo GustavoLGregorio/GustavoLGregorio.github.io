@@ -5,6 +5,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --red: hsl(0,100%,40%);
+  --viva-magenta: hsl(346, 57%, 47%);
+  --viva-magenta-darker: hsl(346, 57%, 57%);
+
 }
 
 @media (prefers-color-scheme: dark) {

@@ -2,5 +2,14 @@ section {
     @apply p-4
 }
 h2 {
-    @apply text-[2rem]
+    @apply text-[1.5rem] font-serif
+}
+p {
+    @apply font-mono
+}
+p a {
+    @apply text-[--viva-magenta]
+}
+p a:hover {
+    @apply text-[--viva-magenta-darker]
 }
