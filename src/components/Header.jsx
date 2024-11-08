@@ -6,26 +6,28 @@ import "@/styles/Header.css";
 export default function Header() {
   const navbar = useRef();
   const [collapsed, setCollapsed] = useState(true);
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(undefined);
 
+  useEffect(() => {}, []);
   useEffect(() => {
-    if (typeof window !== undefined) {
+    if (typeof window !== "undefined") {
       const widthId = window.addEventListener("resize", () => {
         setWidth(window.innerWidth);
       });
     }
+    if (typeof window !== "undefined") {
+      if (collapsed && width < 768) {
+        navbar.current.style.top = "-500%";
+        navbar.current.style.opacity = "0";
+      } else {
+        navbar.current.style.top = "0%";
+        navbar.current.style.opacity = "1";
+      }
 
-    if (collapsed && width < 768) {
-      navbar.current.style.top = "-500%";
-      navbar.current.style.opacity = "0";
-    } else {
-      navbar.current.style.top = "0%";
-      navbar.current.style.opacity = "1";
+      return () => {
+        window.removeEventListener("resize", widthId);
+      };
     }
-
-    return () => {
-      window.removeEventListener("resize", widthId);
-    };
   }, [collapsed, width]);
 
   return (
