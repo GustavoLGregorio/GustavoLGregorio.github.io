@@ -6,11 +6,11 @@ import "@/styles/Home.css";
 
 export default function Home() {
   return (
-    <>
+    <main className="w-full max-w-5xl bg-background text-foreground">
       <Hero></Hero>
-      <SobreMim></SobreMim>
       <Conhecimentos></Conhecimentos>
+      <SobreMim></SobreMim>
       <ProjetosSection></ProjetosSection>
-    </>
+    </main>
   );
 }

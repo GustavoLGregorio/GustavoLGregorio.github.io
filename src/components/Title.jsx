@@ -4,18 +4,17 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 export default function Title() {
   const [typeEffect] = useTypewriter({
-    words: ["Desenvolvedor Web", "FullStack", "Mobile"],
-    typeSpeed: 100,
-    deleteSpeed: 40,
+    words: ["Full-stack: JavaScript", "Mobile: React Native"],
+    typeSpeed: 40,
+    deleteSpeed: 20,
+    delaySpeed: 1500,
     loop: true,
   });
 
   return (
-    <div className="container flex place-content-center px-8">
-      <h1 className="text-[3rem] text-center">
-        <span>{typeEffect}</span>
-        <Cursor cursorStyle="_"></Cursor>
-      </h1>
-    </div>
+    <h2 className="text-[1.5rem] h-6 max-h-max text-center">
+      <span className="hidden">Desenvolvedor Web, FullStack, Mobile</span>
+      <span>{typeEffect}</span>
+    </h2>
   );
 }

@@ -1,4 +1,6 @@
 import "@/styles/globals.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import "@/config/fontawesome";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
