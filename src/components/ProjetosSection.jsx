@@ -7,27 +7,32 @@ export default function ProjetosSection() {
   return (
     <section>
       <h2>Projetos</h2>
-      {project.map((el, index) => {
-        return (
-          <Projeto
-            key={index}
-            projeto={{
-              title: el.title,
-              image: {
-                src: el.image,
-                width: 96,
-                height: 96,
-                alt: "Alt text",
-              },
-              text: el.text,
-            }}
-          >
-            <Projeto.Title></Projeto.Title>
-            <Projeto.Image></Projeto.Image>
-            <Projeto.Text></Projeto.Text>
-          </Projeto>
-        );
-      })}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+        {project.map((el, index) => {
+          return (
+            <Projeto
+              key={index}
+              projeto={{
+                title: el.title,
+                image: {
+                  src: el.image,
+                  base64: el.image_base64,
+                  width: 256,
+                  height: 256,
+                  alt: "Alt text",
+                },
+                text: el.text,
+                stack: "React, Next, Tailwind",
+              }}
+            >
+              <Projeto.Image></Projeto.Image>
+              <Projeto.Title></Projeto.Title>
+              <Projeto.Text></Projeto.Text>
+              <Projeto.Stack></Projeto.Stack>
+            </Projeto>
+          );
+        })}
+      </div>
     </section>
   );
 }

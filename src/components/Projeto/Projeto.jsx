@@ -10,7 +10,9 @@ const ProjetoContext = createContext();
 function Projeto({ children, projeto }) {
   return (
     <ProjetoContext.Provider value={{ projeto }}>
-      <article>{children}</article>
+      <article className="bg-[hsl(0,0%,20%,0.2)] p-4 rounded-md">
+        {children}
+      </article>
     </ProjetoContext.Provider>
   );
 }
@@ -28,12 +30,19 @@ Projeto.Image = () => {
       width={projeto.image.width}
       height={projeto.image.height}
       alt={projeto.image.alt}
+      placeholder="blur"
+      blurDataURL={projeto.image.base64}
+      className="w-full rounded-sm"
     ></Image>
   );
 };
 Projeto.Text = () => {
   const { projeto } = useCustomContext(ProjetoContext);
   return <p>{projeto.text}</p>;
+};
+Projeto.Stack = () => {
+  const { projeto } = useCustomContext(ProjetoContext);
+  return <footer>{projeto.stack}</footer>;
 };
 
 export default Projeto;

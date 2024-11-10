@@ -1,5 +1,5 @@
 section {
-    @apply p-4
+    @apply p-4 container
 }
 h2 {
     @apply text-[1.5rem] font-serif
