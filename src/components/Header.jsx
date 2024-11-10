@@ -6,16 +6,13 @@ import "@/styles/Header.css";
 export default function Header() {
   const navbar = useRef();
   const [collapsed, setCollapsed] = useState(true);
-  const [width, setWidth] = useState(undefined);
+  const [width, setWidth] = useState(null);
 
-  useEffect(() => {}, []);
   useEffect(() => {
     if (typeof window !== "undefined") {
       const widthId = window.addEventListener("resize", () => {
         setWidth(window.innerWidth);
       });
-    }
-    if (typeof window !== "undefined") {
       if (collapsed && width < 768) {
         navbar.current.style.top = "-500%";
         navbar.current.style.opacity = "0";

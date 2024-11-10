@@ -1,5 +1,4 @@
 import Image from "next/image";
-import profilePic from "@/assets/img/profile_pic.png";
 export default function SobreMim() {
   return (
     <section>
@@ -21,9 +20,9 @@ export default function SobreMim() {
         </p>
       </div>
       <div className="container flex w-full justify-center mt-6">
-        <div className="min-w-[200px] w-[66.666666667%] max-w-[500px]">
+        <div className="min-w-[200px] w-[50%] max-w-[500px]">
           <Image
-            src={profilePic}
+            src="/img/profile_pic.png"
             width={500}
             height={500}
             alt="Foto de Gustavo Luiz Gregorio"
