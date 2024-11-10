@@ -17,11 +17,11 @@ function Projeto({ children, projeto }) {
   );
 }
 
-Projeto.Title = () => {
+Projeto.Title = function ProjetoTitle() {
   const { projeto } = useCustomContext(ProjetoContext);
   return <h3>{projeto.title}</h3>;
 };
-Projeto.Image = () => {
+Projeto.Image = function ProjetoImage() {
   const { projeto } = useCustomContext(ProjetoContext);
 
   return (
@@ -36,11 +36,11 @@ Projeto.Image = () => {
     ></Image>
   );
 };
-Projeto.Text = () => {
+Projeto.Text = function ProjetoText() {
   const { projeto } = useCustomContext(ProjetoContext);
   return <p>{projeto.text}</p>;
 };
-Projeto.Stack = () => {
+Projeto.Stack = function ProjetoStack() {
   const { projeto } = useCustomContext(ProjetoContext);
   return <footer>{projeto.stack}</footer>;
 };

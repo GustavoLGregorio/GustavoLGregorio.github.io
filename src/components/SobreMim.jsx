@@ -27,6 +27,7 @@ export default function SobreMim() {
             width={500}
             height={500}
             alt="Foto de Gustavo Luiz Gregorio"
+            placeholder="blur"
             className=""
           ></Image>
         </div>
