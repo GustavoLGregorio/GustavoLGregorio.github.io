@@ -10,9 +10,7 @@ const ProjetoContext = createContext();
 function Projeto({ children, projeto }) {
   return (
     <ProjetoContext.Provider value={{ projeto }}>
-      <article className="bg-[hsl(0,0%,20%,0.2)] p-4 rounded-md">
-        {children}
-      </article>
+      <article>{children}</article>
     </ProjetoContext.Provider>
   );
 }
@@ -32,7 +30,7 @@ Projeto.Image = function ProjetoImage() {
       alt={projeto.image.alt}
       placeholder="blur"
       blurDataURL={projeto.image.base64}
-      className="w-full rounded-sm"
+      className="w-full rounded-t-md object-cover object-center aspect-[3/2]"
     ></Image>
   );
 };

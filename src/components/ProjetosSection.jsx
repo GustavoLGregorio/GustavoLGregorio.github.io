@@ -26,9 +26,11 @@ export default function ProjetosSection() {
               }}
             >
               <Projeto.Image></Projeto.Image>
-              <Projeto.Title></Projeto.Title>
-              <Projeto.Text></Projeto.Text>
-              <Projeto.Stack></Projeto.Stack>
+              <div className="px-6 py-4 bg-foreground text-background rounded-b-md">
+                <Projeto.Title></Projeto.Title>
+                <Projeto.Text></Projeto.Text>
+                <Projeto.Stack></Projeto.Stack>
+              </div>
             </Projeto>
           );
         })}

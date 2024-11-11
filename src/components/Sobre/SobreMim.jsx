@@ -1,10 +1,10 @@
 import Image from "next/image";
-import profilePic from "../../public/img/profile_pic.png";
+import profilePic from "../../../public/img/profile_pic.png";
 export default function SobreMim() {
   return (
     <section>
       <h2>Sobre</h2>
-      <div>
+      <div className="flex flex-col gap-y-4 mb-8">
         <p>
           Meu nome é Gustavo, tenho 20 anos e sou graduando em Técnologia em
           Analise e Desenvolvimento de Sistemas no Instituto Federal do
@@ -20,15 +20,15 @@ export default function SobreMim() {
           aprofundar profissionalmente em Software.
         </p>
       </div>
-      <div className="container flex w-full justify-center mt-6">
-        <div className="min-w-[200px] w-[100%] max-w-[500px]">
+      <div className="container flex w-full justify-center">
+        <div className="w-[50%] w-max-[500px]">
           <Image
             src={profilePic}
             width={500}
             height={500}
             alt="Foto de Gustavo Luiz Gregorio"
             placeholder="blur"
-            className=""
+            className="rounded-full"
           ></Image>
         </div>
       </div>
