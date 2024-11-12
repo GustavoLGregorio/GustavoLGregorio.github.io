@@ -1,6 +1,6 @@
 "use client";
 
-import Projeto from "./Projeto/Projeto";
+import Projeto from "./Projeto";
 import project from "@/assets/json/projects.json";
 
 export default function ProjetosSection() {
@@ -21,12 +21,12 @@ export default function ProjetosSection() {
                   height: 256,
                   alt: "Alt text",
                 },
-                text: el.text,
-                stack: "React, Next, Tailwind",
+                description: el.description,
+                stack: [...el.stack],
               }}
             >
               <Projeto.Image></Projeto.Image>
-              <div className="px-6 py-4 bg-foreground text-background rounded-b-md">
+              <div className="px-6 py-4 bg-foreground text-background rounded-b-md relative z-10">
                 <Projeto.Title></Projeto.Title>
                 <Projeto.Text></Projeto.Text>
                 <Projeto.Stack></Projeto.Stack>

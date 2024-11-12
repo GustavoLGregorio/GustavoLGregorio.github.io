@@ -4,11 +4,11 @@
 
 :root {
   --background: #ffffff;
+  --background-shadow: #17171784;
   --foreground: #171717;
-  --red: hsl(0,100%,40%);
+  --red: hsl(0, 100%, 40%);
   --viva-magenta: hsl(346, 57%, 47%);
   --viva-magenta-darker: hsl(346, 57%, 57%);
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,9 +18,63 @@
   }
 }
 
+html {
+  animation: fade-in 500ms ease-out 1;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@property --rotate {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@property --rotate-2 {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes fade-in {
+  0% {
+   opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+   opacity: 1;
+  } 
+ }
+
+ @keyframes spin {
+  0% {
+      --rotate: 0deg;
+      --rotate-2: calc(var(--rotate) + 10deg)
+  }
+  95% {
+      --rotate-2: calc(var(--rotate) + 10deg)
+  }
+  100% {
+      --rotate: 360deg;
+      --rotate-2: var(--rotate);
+  }
+}
+@keyframes reverse-spin {
+  0% {
+      --rotate: 360deg;
+      --rotate-2: calc(var(--rotate) - 10deg)
+  }
+  95% {
+      --rotate-2: calc(var(--rotate) - 10deg)
+  }
+  100% {
+      --rotate: 0deg;
+      --rotate-2: var(--rotate);
+  }
+}

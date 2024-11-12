@@ -23,6 +23,56 @@ section article:last-of-type {
     @apply mb-0
 }
 
+
+.projeto {
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+}
+.projeto::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: calc(100% + 0.75rem);
+    height: calc(100% + 0.75rem);
+    
+    @apply rounded-md
+}
+.projeto:hover::before {
+    animation: spin 500ms ease 1 forwards;
+    background: conic-gradient(
+        hsl(301, 100%, 40%) var(--rotate),
+        hsl(281, 100%, 40%) var(--rotate-2),
+        hsl(281, 100%, 40%) var(--rotate-2),
+        transparent calc(var(--rotate-2) + 10deg)
+    );
+    z-index: 0;
+}
+.projeto:not(:hover)::before {
+    animation: reverse-spin 250ms ease 1 backwards;
+    background: conic-gradient(
+        hsl(301, 100%, 40%) var(--rotate),
+        hsl(281, 100%, 40%) var(--rotate-2),
+        transparent calc(var(--rotate-2) - 10deg)
+    );
+    z-index: 0;
+
+}
+.projeto-image {
+    position: relative;
+    box-shadow: 0px 0px 10px 0px var(--background-shadow);
+}
+.projeto-image::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+}
 .expertise-block {
     position: relative;
     z-index: 10;

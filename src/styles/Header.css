@@ -1,12 +1,13 @@
 #nav {
-    transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
+  box-shadow: 0px 0px 20px 5px var(--background-shadow);
 }
 #toggler-icon {
-    transition: all 50ms ease;
+  transition: all 50ms ease;
 }
 #nav ul li a {
-    @apply block text-[1.1rem] py-2 md:px-3 md:py-0
+  @apply block text-[1.1rem] py-2 md:px-3 md:py-0;
 }
 #nav ul li a:hover {
-    @apply relative text-[hsl(0,0%,40%)]
+  @apply relative text-[hsl(0,0%,40%)];
 }
