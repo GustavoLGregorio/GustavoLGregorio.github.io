@@ -4,7 +4,7 @@
 
 :root {
   --background: #ffffff;
-  --background-shadow: #17171784;
+  --background-shadow: hsla(0, 0%, 10%, 0.2);
   --foreground: #171717;
   --red: hsl(0, 100%, 40%);
   --viva-magenta: hsl(346, 57%, 47%);
@@ -16,16 +16,19 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
-
-html {
-  animation: fade-in 500ms ease-out 1;
+  .projeto-image {
+    box-shadow: 0px 5px 10px 0px var(--background-shadow);
+  }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-max-w-middle {
+  @apply max-w-5xl mx-auto
 }
 
 @property --rotate {
@@ -40,41 +43,29 @@ body {
   initial-value: 0deg;
 }
 
-@keyframes fade-in {
+@keyframes spin {
   0% {
-   opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  100% {
-   opacity: 1;
-  } 
- }
-
- @keyframes spin {
-  0% {
-      --rotate: 0deg;
-      --rotate-2: calc(var(--rotate) + 10deg)
+    --rotate: 0deg;
+    --rotate-2: calc(var(--rotate) + 10deg);
   }
   95% {
-      --rotate-2: calc(var(--rotate) + 10deg)
+    --rotate-2: calc(var(--rotate) + 10deg);
   }
   100% {
-      --rotate: 360deg;
-      --rotate-2: var(--rotate);
+    --rotate: 360deg;
+    --rotate-2: var(--rotate);
   }
 }
 @keyframes reverse-spin {
   0% {
-      --rotate: 360deg;
-      --rotate-2: calc(var(--rotate) - 10deg)
+    --rotate: 360deg;
+    --rotate-2: calc(var(--rotate) - 10deg);
   }
   95% {
-      --rotate-2: calc(var(--rotate) - 10deg)
+    --rotate-2: calc(var(--rotate) - 10deg);
   }
   100% {
-      --rotate: 0deg;
-      --rotate-2: var(--rotate);
+    --rotate: 0deg;
+    --rotate-2: var(--rotate);
   }
 }

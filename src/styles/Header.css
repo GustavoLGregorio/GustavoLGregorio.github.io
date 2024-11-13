@@ -6,7 +6,7 @@
   transition: all 50ms ease;
 }
 #nav ul li a {
-  @apply block text-[1.1rem] py-2 md:px-3 md:py-0;
+  @apply block py-2 text-[1.1rem] md:px-3 md:py-0 md:text-[1.5rem];
 }
 #nav ul li a:hover {
   @apply relative text-[hsl(0,0%,40%)];

@@ -6,7 +6,7 @@ import "@/styles/Home.css";
 
 export default function Home() {
   return (
-    <main className="w-full text-[1.1rem] max-w-5xl px-8 bg-background text-foreground">
+    <main className="mx-auto w-full max-w-4xl bg-background px-8 text-[1.1rem] text-foreground">
       <Hero></Hero>
       <Conhecimentos></Conhecimentos>
       <ProjetosSection></ProjetosSection>

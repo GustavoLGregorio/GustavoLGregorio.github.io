@@ -12,7 +12,7 @@ export default function Title() {
   });
 
   return (
-    <h2 className="text-[1.5rem] min-h-10 max-h-max text-center">
+    <h2 className="max-h-max min-h-10 text-center text-[1.5rem]">
       <span className="hidden">Desenvolvedor Web, FullStack, Mobile</span>
       <span>{typeEffect}</span>
     </h2>

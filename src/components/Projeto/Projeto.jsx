@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext } from "react";
+import React, { createContext, useRef } from "react";
 import useCustomContext from "@/hooks/useCustomContext";
 import Image from "next/image";
 import "@/styles/Home.css";
@@ -8,9 +8,17 @@ import "@/styles/Home.css";
 const ProjetoContext = createContext();
 
 function Projeto({ children, projeto }) {
+  const articleRef = useRef();
+
   return (
     <ProjetoContext.Provider value={{ projeto }}>
-      <article className="projeto">{children}</article>
+      <article
+        ref={articleRef}
+        onMouseEnter={() => articleRef.current.classList.add("on-hover")}
+        className="projeto custom-box-shadow-sm rounded-md"
+      >
+        {children}
+      </article>
     </ProjetoContext.Provider>
   );
 }
@@ -30,7 +38,7 @@ Projeto.Image = function ProjetoImage() {
       alt={projeto.image.alt}
       placeholder="blur"
       blurDataURL={projeto.image.base64}
-      className="w-full rounded-t-md object-cover object-center aspect-[3/2] projeto-image"
+      className="projeto-image"
     ></Image>
   );
 };
@@ -41,12 +49,12 @@ Projeto.Text = function ProjetoText() {
 Projeto.Stack = function ProjetoStack() {
   const { projeto } = useCustomContext(ProjetoContext);
   return (
-    <footer className="w-full flex flex-wrap gap-2 justify-end text-[1rem]">
+    <footer className="flex w-full flex-wrap justify-end gap-2 text-[1rem]">
       {projeto.stack.map((el, index) => {
         return (
           <span
             key={index}
-            className="bg-background text-foreground px-2 py-1 rounded-md font-semibold uppercase"
+            className="rounded-md bg-background px-2 py-1 font-semibold uppercase text-foreground"
           >
             {el}
           </span>

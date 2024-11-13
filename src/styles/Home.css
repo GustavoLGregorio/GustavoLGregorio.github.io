@@ -1,111 +1,110 @@
 h2 {
-    @apply text-[2.5rem] font-sans font-bold text-center mb-8
+  @apply mb-8 text-center font-sans text-[2.5rem] font-bold;
 }
 h3 {
-    @apply text-[1.5rem] font-bold
+  @apply text-[1.5rem] font-bold;
 }
 p {
-    @apply font-mono
+  @apply font-mono;
 }
 p a {
-    @apply text-[--viva-magenta]
+  @apply text-[--viva-magenta];
 }
 p a:hover {
-    @apply text-[--viva-magenta-darker]
+  @apply text-[--viva-magenta-darker];
 }
 main section {
-    @apply mb-20
+  @apply mb-20;
 }
 section article {
-    @apply mb-4
+  @apply mb-4;
 }
 section article:last-of-type {
-    @apply mb-0
+  @apply mb-0;
 }
-
 
 .projeto {
-    position: relative;
-    cursor: pointer;
-    z-index: 10;
+  position: relative;
+  cursor: pointer;
+  z-index: 10;
 }
 .projeto::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    width: calc(100% + 0.75rem);
-    height: calc(100% + 0.75rem);
-    
-    @apply rounded-md
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: calc(100% + 0.5rem);
+  height: calc(100% + 0.5rem);
+  @apply rounded-md;
 }
 .projeto:hover::before {
-    animation: spin 500ms ease 1 forwards;
-    background: conic-gradient(
-        hsl(301, 100%, 40%) var(--rotate),
-        hsl(281, 100%, 40%) var(--rotate-2),
-        hsl(281, 100%, 40%) var(--rotate-2),
-        transparent calc(var(--rotate-2) + 10deg)
-    );
-    z-index: 0;
+  animation: spin 500ms ease forwards;
+  background: conic-gradient(
+    hsl(301, 100%, 40%) var(--rotate),
+    hsl(281, 100%, 40%) var(--rotate-2),
+    hsl(281, 100%, 40%) var(--rotate-2),
+    transparent calc(var(--rotate-2) + 10deg)
+  );
+  z-index: 0;
 }
-.projeto:not(:hover)::before {
-    animation: reverse-spin 250ms ease 1 backwards;
-    background: conic-gradient(
-        hsl(301, 100%, 40%) var(--rotate),
-        hsl(281, 100%, 40%) var(--rotate-2),
-        transparent calc(var(--rotate-2) - 10deg)
-    );
-    z-index: 0;
-
+.projeto.on-hover:not(:hover)::before {
+  animation: reverse-spin 500ms ease forwards;
+  background: conic-gradient(
+    hsl(301, 100%, 40%) var(--rotate),
+    hsl(281, 100%, 40%) var(--rotate-2),
+    transparent calc(var(--rotate-2) - 10deg)
+  );
+  z-index: 0;
 }
 .projeto-image {
-    position: relative;
-    box-shadow: 0px 0px 10px 0px var(--background-shadow);
+  @apply relative z-20 aspect-[3/2] w-full rounded-t-md object-cover object-center;
+}
+.custom-box-shadow-sm {
+  box-shadow: 0px 0px 15px 2px var(--background-shadow);
 }
 .projeto-image::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: red;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: red;
 }
 .expertise-block {
-    position: relative;
-    z-index: 10;
+  position: relative;
+  z-index: 10;
 }
 .expertise-block::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border: 2px solid var(--foreground);
-    z-index: 0;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 2px solid var(--foreground);
+  z-index: 0;
 }
 .expertise-text {
-    position: relative;
+  position: relative;
 }
 .expertise-text::before {
-    position: absolute;
-    content: "";
-    width: 3px;
-    height: 100%;
-    top: 50%;
-    translate: 0% -50%;
-    left: 0;
-    background: hsl(0,0%,40%);
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 100%;
+  top: 50%;
+  translate: 0% -50%;
+  left: 0;
+  background: hsl(0, 0%, 40%);
 }
 .expertise-text::after {
-    position: absolute;
-    content: "";
-    width: 15px;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background: hsl(0,0%,40%);
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: hsl(0, 0%, 40%);
 }

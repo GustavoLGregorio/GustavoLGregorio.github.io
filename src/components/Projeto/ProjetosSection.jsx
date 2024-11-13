@@ -7,7 +7,7 @@ export default function ProjetosSection() {
   return (
     <section>
       <h2>Projetos</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+      <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
         {project.map((el, index) => {
           return (
             <Projeto
@@ -26,7 +26,7 @@ export default function ProjetosSection() {
               }}
             >
               <Projeto.Image></Projeto.Image>
-              <div className="px-6 py-4 bg-foreground text-background rounded-b-md relative z-10">
+              <div className="relative z-10 rounded-b-md bg-foreground px-6 py-4 text-background">
                 <Projeto.Title></Projeto.Title>
                 <Projeto.Text></Projeto.Text>
                 <Projeto.Stack></Projeto.Stack>

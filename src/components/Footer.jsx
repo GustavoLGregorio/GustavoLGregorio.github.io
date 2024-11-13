@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="w-full text-center p-4">
+    <footer className="absolute bottom-0 w-full p-8 text-center text-background">
       &copy; 2024 | Gustavo L. G.
     </footer>
   );

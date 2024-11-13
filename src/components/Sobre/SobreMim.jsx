@@ -4,7 +4,7 @@ export default function SobreMim() {
   return (
     <section>
       <h2>Sobre</h2>
-      <div className="flex flex-col gap-y-4 mb-8">
+      <div className="mb-8 flex flex-col gap-y-4">
         <p>
           Meu nome é Gustavo, tenho 20 anos e sou graduando em Técnologia em
           Analise e Desenvolvimento de Sistemas no Instituto Federal do
@@ -21,7 +21,7 @@ export default function SobreMim() {
         </p>
       </div>
       <div className="container flex w-full justify-center">
-        <div className="w-[50%] w-max-[500px]">
+        <div className="w-max-[500px] w-[50%]">
           <Image
             src={profilePic}
             width={500}
