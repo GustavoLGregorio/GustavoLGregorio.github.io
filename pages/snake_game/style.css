@@ -1,0 +1,144 @@
+@keyframes bounce {
+    0% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(20deg);
+
+    }
+}
+
+:root {
+    --snake: #5e9c3b;
+    --apple: #ff5757;
+    --ground: #F6FCDF;
+    --outer-ground: hsl(98, 46%, 22%);
+    --wall: #859F3D;
+
+    --endscreen: #859F3D;
+    --endscreen-button: #ff5757;
+    --endscreen-text: #F6FCDF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100dvh;
+    overflow: hidden;
+}
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--outer-ground);
+}
+#container {
+    background: var(--ground);
+    width: 500px;
+    height: 500px;
+    position: relative;
+    z-index: 0;
+}
+#container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: 20px solid var(--wall);
+    z-index: 10;
+}
+#snake {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    display: inline;
+    width: 20px;
+    height: 20px;
+    background: url('content/snake-head.png') no-repeat center center;
+    z-index: 10;
+}
+
+.snake_body {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    
+    z-index: 1;
+    
+    display: inline;
+    width: 20px;
+    height: 20px;
+    background: var(--snake) url('content/snake-middle.png') no-repeat center center;
+    transition: all 50ms ease;
+}
+
+div.apple {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    display: inline;
+    background: url('content/apple.png') no-repeat center center;
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+
+    animation: bounce 400ms linear alternate-reverse infinite;
+
+}
+
+.endgame {
+    position: absolute;
+    width: clamp(300px, 33.33333333%, 1000px);
+    height: clamp(300px, 33.33333333%, 1000px);
+    z-index: 20;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background: var(--endscreen);
+    padding: 2rem;
+    border-radius: 1rem;
+    color: var(--endscreen-text);
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    display: none;
+
+    box-shadow: 0px 0px 5px 10px hsl(0,100%,0%,0.2);
+}
+.endgame h2 {
+    font-family: sans-serif;
+    font-size: 3rem;
+}
+.endgame p {
+    font-size: 2rem;
+}
+.endgame button {
+    color: var(--endscreen-text);
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: white;
+    background: var(--endscreen-button);
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.endgame button:hover {
+    background: var(--endscreen-button);
+}

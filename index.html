@@ -1,140 +1,218 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Gustavo Luiz Gregorio">
-        <meta name="description" content="Portfólio de desenvolvimento web de Gustavo Luiz Gregorio">
-        <meta name="keywords" content="Portfolio, desenvolvedor web, web design, desenvolvedor, programação, frontend, html, css, javascript, php">
-        <title>Meu Portfólio</title>
-        <link rel="shortcut icon" href="content/img/g_white.svg" type="image/x-icon">
-        <link rel="preload" href="content/img/g_white.svg" as="image">
-        <link rel="preload" href="content/img/projeto_lixadora_gregorio.png" as="image">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <!-- conteudo externo -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
-        <script src="https://kit.fontawesome.com/c9e475ae7e.js" crossorigin="anonymous" defer></script>
-        <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js" defer></script>
-        <!-- estilo e script customizados -->
-        <link rel="stylesheet" href="index.css">
-        <script src="script.js" defer></script>
-    </head>
-    <body class="text-light">
-        <div id="home" class="d-flex align-items-center">
-            <header class="d-flex align-items-center justify-content-center mb-md-5">
-                <div class="fixed-top d-flex align-content-center justify-content-center">
-                    <nav class="fixed-top navbar navbar-dark navbar-expand-md w-100 px-4 px-xl-0 d-md-flex justify-content-md-around">
-                        <div class="navbar-brand" id="container_foto">
-                            <img class="img-fluid" src="content/img/profile_pic.png" alt="">
-                        </div>
-                        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navegacao_lista">
-                            <i class="navbar-toggler-icon"></i>
-                        </button>
-                        <ul id="navegacao_lista" class="navbar-nav navbar-collapse collapse d-md-flex justify-content-md-end">
-                            <li class="nav-item"><a class="nav-link active" href="#home">home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#sobre">sobre</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#conhecimentos">conhecimentos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#projetos">projetos</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
-            <div id="container_h1" class="efeito">
-                <div>
-                    <h1>
-                        <span class="typer transicao text-light" data-words="Desenvolvedor, Web designer" data-delay="100" data-deleteDelay="100"></span>
-                        <span class="cursor"></span>
-                    </h1>
-                    <p>Blogs, sites e sistemas</p>
-                </div>
-            </div>
-        </div>
-        
-        <main class="px-4 px-lg-0">
-            <section class="efeito" id="sobre">
-                <h2>Sobre</h2>
-                <div>
-                    <p>
-                        Meu nome é Gustavo, tenho 20 anos e sou graduando em Técnologia em Analise e Desenvolvimento de Sistemas no Instituto Federal do Paraná (IFPR).
-                    </p>
-                    <p>
-                        Tenho como objetivo aprender e crescer na área de informática, já tendo conhecimentos e experiência com hardware, agora busco me aprofundar profissionalmente em Software.
-                    </p>
-                </div>
-            </section>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Gustavo Luiz Gregorio" />
+		<meta name="description" content="Portfólio de desenvolvimento web de Gustavo Luiz Gregorio" />
+		<meta
+			name="keywords"
+			content="Portfolio, desenvolvedor web, web design, desenvolvedor, programação, frontend, html, css, javascript, php"
+		/>
+		<title>Meu Portfólio</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+		<!-- conteudo externo -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script src="https://kit.fontawesome.com/c9e475ae7e.js" crossorigin="anonymous" defer></script>
+		<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js" defer></script>
+		<!-- estilo e script customizados -->
+		<link rel="stylesheet" href="index.css" />
+		<script src="script.js" defer></script>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	</head>
+	<body class="text-light">
+		<div id="home" class="d-flex align-items-center">
+			<header class="d-flex align-items-center justify-content-center mb-md-5">
+				<div class="fixed-top d-flex align-content-center justify-content-center">
+					<nav
+						class="fixed-top navbar navbar-dark navbar-expand-md w-100 px-4 px-xl-0 d-md-flex justify-content-md-around"
+					>
+						<div class="navbar-brand" id="container_foto">
+							<img class="img-fluid" src="content/img/profile_pic.png" alt="" />
+						</div>
+						<button
+							class="navbar-toggler"
+							data-bs-toggle="collapse"
+							data-bs-target="#navegacao_lista"
+						>
+							<i class="navbar-toggler-icon"></i>
+						</button>
+						<ul
+							id="navegacao_lista"
+							class="navbar-nav navbar-collapse collapse d-md-flex justify-content-md-end"
+						>
+							<li class="nav-item">
+								<a class="nav-link active" href="#home">home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#sobre">sobre</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#conhecimentos">conhecimentos</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#projetos">projetos</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<div id="container_h1" class="efeito">
+				<div>
+					<h1>
+						<span
+							class="typer transicao text-light"
+							data-words="Desenvolvedor, Fuulstack Dev, Mobile Dev"
+							data-delay="80"
+							data-deleteDelay="50"
+						></span>
+						<span class="cursor"></span>
+					</h1>
+					<p>Blogs, sites e sistemas</p>
+				</div>
+			</div>
+		</div>
 
-            <section class="efeito direita" id="conhecimentos">
-                <h2>Conhecimentos</h2>
-                <div>
-                    <p>
-                        Além das ferramentas abaixo, tenho prática com design responsivo, uso de APIs, desenvolvimento assíncrono e Orientação a Objetos
-                    </p>
-                </div>
-                <div class="d-grid mt-3 mx-3">
-                    <div class="row">
-                        <div class="col-6">
-                            <p><i class="fa-brands fa-html5" style="color: #E34F26;"></i>html</p>
-                            <p><i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i>css</p>
-                            <p><i class="fa-brands fa-bootstrap" style="color: #7952B3;"></i>bootstrap</p>
-                        </div>
-                        <div class="col-6">
-                            <p><i class="fa-brands fa-js" style="color: #F7DF1E ;"></i>javascript</p>
-                            <p><i class="fa-brands fa-php" style="color: #777BB4 ;"></i>php</p>
-                            <p><i class="fa-solid fa-database" style="color: #4479A1 ;"></i>mysql</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="efeito" id="projetos">
-                <h2>Projetos</h2>
-                <div class="container px-0">
-                    <div class="row gap-3 row-gap-0 mx-0 px-0">
-                        <article class="col-12 col-lg-4 efeito">
-                            <div>
-                                <h3><a href="https://lixadoragregorio.com.br" target="_blank">Lixadora Gregorio</a></h3>
-                                <p>
-                                    Site que fiz para a micro-empresa de lixamentos que meu tio possui. Demonstra uso de técnicas de SEO junto a um design moderno
-                                </p>
-                            </div>
-                            <div>
-                                <a href="https://lixadoragregorio.com.br" target="_blank">
-                                    <img src="content/img/projeto_lixadora_gregorio.png" alt="Foto da home do site lixadoragregorio.com.br">
-                                </a>
-                                <div class="small">html &middot; css &middot; bootstrap &middot; javascript &middot; php</div>
-                            </div>
-                        </article>
-                        <article class="col-12 col-lg-4 efeito direita">
-                            <div>
-                                <h3><a href="http://gustavo-api.free.nf" target="_blank">Projeto APIs</a></h3>
-                                <p>
-                                    Site que construi para demonstrar conhecimentos práticos no uso de APIs, tanto em javascript como em php
-                                </p>
-                            </div>
-                            <div>
-                                <a href="http://gustavo-api.free.nf" target="_blank">
-                                    <img src="content/img/projeto_lixadora_gregorio.png" alt="">
-                                </a>
-                                <div class="small">html &middot; css &middot; javascript &middot; php</div>
-                            </div>
-                        </article>
-                        <article class="col-12 col-lg-4 efeito">
-                            <div>
-                                <h3><a href="pages/jogo_da_forca/index.html" target="_blank">Jogo da Forca</a></h3>
-                                <p>
-                                    Um jogo da forca simples construído com javascript puro, com sistema de localstorage para saves e pontuações persistentes
-                                </p>
-                            </div>
-                            <div>
-                                <a href="pages/jogo_da_forca/index.html" target="_blank">
-                                    <img src="content/img/projeto_jogo_da_forca.png" alt="Foto da home da página Jogo Da Forca">
-                                </a>
-                                <div class="small">html &middot; css &middot; javascript</div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </body>
+		<main class="px-4 px-lg-0">
+			<section class="efeito" id="sobre">
+				<h2>Sobre</h2>
+				<div>
+					<p>
+						Meu nome é Gustavo, tenho 20 anos e sou graduando em Técnologia em Analise e
+						Desenvolvimento de Sistemas no Instituto Federal do Paraná (IFPR).
+					</p>
+					<p>
+						Tenho como objetivo aprender e crescer na área de informática, já tendo conhecimentos e
+						experiência com hardware, agora busco me aprofundar profissionalmente em Software.
+					</p>
+				</div>
+			</section>
+
+			<section class="efeito direita" id="conhecimentos">
+				<h2>Conhecimentos</h2>
+				<div>
+					<p>
+						Além das ferramentas abaixo, tenho prática com design responsivo, uso de APIs,
+						desenvolvimento assíncrono e Orientação a Objetos
+					</p>
+				</div>
+				<div class="d-grid mt-3 mx-3">
+					<div class="row">
+						<div class="col-6">
+							<p><i class="icon fa-brands fa-html5" style="color: #e34f26"></i>html</p>
+							<p><i class="icon fa-brands fa-css3-alt" style="color: #1572b6"></i>css</p>
+							<p><i class="icon fa-brands fa-js" style="color: #f7df1e"></i>javascript</p>
+							<p>
+								<img
+									class="icon"
+									src="/content/logos/tailwind.svg"
+									style="color: #38bdf8"
+								/>tailwind
+							</p>
+							<p><i class="icon fa-brands fa-bootstrap" style="color: #7952b3"></i>bootstrap</p>
+						</div>
+						<div class="col-6">
+							<p><i class="icon fa-brands fa-react" style="color: #61dbfb"></i>react</p>
+							<p><i class="icon fa-brands fa-php" style="color: #777bb4"></i>php</p>
+							<p><i class="icon fa-solid fa-database" style="color: #4479a1"></i>mysql</p>
+							<p>
+								<img class="icon" src="/content/logos/mongodb.svg" style="color: #38bdf8" />mongodb
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="efeito" id="projetos">
+				<h2>Projetos</h2>
+				<div class="container px-0">
+					<div class="row gap-3 row-gap-0 mx-0 px-0">
+						<!-- projeto japao -->
+						<article class="col-12 col-lg-4 efeito" id="projeto_japao">
+							<div>
+								<h3 class="cursor-pointer">Projeto Japão</h3>
+								<p>
+									Projeto que fiz para uma dispensa por competência na matéria de "Desenvolvimento
+									Web 1" da faculdade. Utiliza design moderno e React
+								</p>
+							</div>
+							<div>
+								<img
+									src="content/img/projetos/projeto_japao.png"
+									alt="Foto da home da página Projeto Japão"
+								/>
+								<div class="small">react &middot; tailwind &middot; vite</div>
+							</div>
+						</article>
+
+						<!-- lixadora gregorio -->
+						<!-- <article class="col-12 col-lg-4 efeito" id="lixadora_gregorio">
+							<div>
+								<h3>Lixadora Gregorio</h3>
+								<p>
+									Site que fiz para a micro-empresa de lixamentos que meu tio possui. Demonstra uso
+									de técnicas de SEO junto a um design moderno
+								</p>
+							</div>
+							<div>
+								<img
+									src="content/img/projeto_lixadora_gregorio.png"
+									alt="Foto da home do site Lixadora Gregorio"
+								/>
+								<div class="small">
+									html &middot; css &middot; javascript &middot; bootstrap &middot; php
+								</div>
+							</div>
+						</article> -->
+
+						<!-- snake-game -->
+						<article class="col-12 col-lg-4 efeito direita" id="snake_game">
+							<div>
+								<h3>Snake-game</h3>
+								<p>
+									Um jogo da cobrinha simples construído com javascript puro, com manipulação de
+									atributos e nodes
+								</p>
+							</div>
+							<div>
+								<img
+									src="content/img/projetos/snake_game.png"
+									alt="Foto da home da pagina Snake Game"
+								/>
+								<div class="small">html &middot; css &middot; javascript &middot; php</div>
+							</div>
+						</article>
+
+						<!-- hangman-game -->
+						<article class="col-12 col-lg-4 efeito" id="hangman_game">
+							<div>
+								<h3>Hangman</h3>
+								<p>
+									Um jogo da forca simples construído com javascript puro, com sistema de
+									localstorage para saves e pontuações persistentes
+								</p>
+							</div>
+							<div>
+								<img
+									src="content/img/projetos/projeto_jogo_da_forca.png"
+									alt="Foto da home da página Jogo Da Forca"
+								/>
+								<div class="small">html &middot; css &middot; javascript</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>
