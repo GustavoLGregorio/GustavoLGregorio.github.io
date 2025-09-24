@@ -9,11 +9,11 @@ export type ProjectProps = {
 export default function Project(props: ProjectProps) {
     return (
         <article className="relative flex flex-col-reverse">
-            <div className="absolute top-[50%] flex w-[80%] translate-y-[-50%] flex-col gap-1 self-center rounded-xl bg-[hsla(180,4%,5%,0.25)] p-4">
-                <h3 className="text-3xl capitalize">
+            <div className="cs-filter-blur absolute top-[50%] flex w-[80%] translate-y-[-50%] flex-col gap-1 self-center rounded-xl bg-[hsla(180,4%,5%,0.25)] p-4">
+                <h3 className="cs-font-tilt-warp text-3xl capitalize">
                     {props.title}
                 </h3>
-                <p className="text-xl capitalize">
+                <p className="cs-font-cascadia-code text-xl capitalize">
                     {props.description}
                 </p>
             </div>

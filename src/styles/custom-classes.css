@@ -1,0 +1,19 @@
+.cs-filter-blur {
+    backdrop-filter: blur(2px);
+}
+
+.cs-font-lalezar {
+    font-family: "Lalezar";
+}
+.cs-font-tilt-warp {
+    font-family: "Tilt-Warp";
+}
+.cs-font-montserrat {
+    font-family: "Montserrat";
+}
+.cs-font-fragment-mono {
+    font-family: "Fragment-mono";
+}
+.cs-font-cascadia-code {
+    font-family: "Cascadia-Code";
+}

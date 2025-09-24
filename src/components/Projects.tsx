@@ -1,5 +1,6 @@
 import Project from "./Project";
 import type { ProjectProps } from "./Project";
+import SectionTitle from "./SectionTitle";
 
 export default function Projects() {
     type ProjectType = ProjectProps & {
@@ -8,14 +9,28 @@ export default function Projects() {
     const projects: ProjectType[] = [
         {
             id: 0,
-            title: "primeiro",
-            imageSource: "./../src/assets/images/cat.jpg",
+            title: "BrioJS",
+            imageSource: "./../src/assets/images/steven.png",
             imageAlt: "cat",
             description: "descrição",
         },
         {
             id: 1,
-            title: "primeiro",
+            title: "ParticlesJS",
+            imageSource: "./../src/assets/images/steven.png",
+            imageAlt: "",
+            description: "descrição 2",
+        },
+        {
+            id: 2,
+            title: "Japão Showcase",
+            imageSource: "./../src/assets/images/steven.png",
+            imageAlt: "",
+            description: "descrição 2",
+        },
+        {
+            id: 3,
+            title: "Hangman",
             imageSource: "./../src/assets/images/steven.png",
             imageAlt: "",
             description: "descrição 2",
@@ -24,7 +39,7 @@ export default function Projects() {
 
     return (
         <section>
-            <h2 className="mb-4 text-4xl">Projetos</h2>
+            <SectionTitle title="projetos" />
 
             <div className="flex flex-col gap-6">
                 {projects.map((project) => (

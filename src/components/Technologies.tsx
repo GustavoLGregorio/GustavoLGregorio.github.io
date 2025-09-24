@@ -39,10 +39,12 @@ export default function Technologies() {
                 ref={carrousselRef}
             >
                 {tecs.map((_, index) => (
-                    <div
-                        key={index}
-                        className="aspect-square w-24 rounded-xl bg-[yellow]"
-                    ></div>
+                    <div key={index}>
+                        <div className="aspect-square w-24 rounded-xl bg-[yellow]"></div>
+                        <h4 className="cs-font-cascadia-code text-center font-bold">
+                            JS
+                        </h4>
+                    </div>
                 ))}
             </div>
         </div>
