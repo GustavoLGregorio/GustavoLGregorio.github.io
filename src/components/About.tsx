@@ -13,12 +13,11 @@ export default function About() {
                     className="aspect-square w-[50%] self-center rounded-xl object-cover object-center"
                 />
                 <p className="cs-font-fragment-mono">
-                    Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Veniam culpa in, unde
-                    assumenda architecto et voluptatibus at hic
-                    pariatur dolor illum dolorem numquam tempora
-                    perspiciatis neque soluta quae, recusandae
-                    facilis iusto amet odio totam!
+                    Meu nome é Gustavo, tenho 21 anos e sou
+                    graduando em Técnologia em Analise e
+                    Desenvolvimento de Sistemas (TADS) no Instituto
+                    Federal do Paraná (IFPR). Gosto de programar
+                    jogos e ferramentas.
                 </p>
                 <Technologies />
             </div>
