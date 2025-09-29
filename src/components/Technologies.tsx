@@ -122,7 +122,14 @@ export default function Technologies() {
     return (
         <div
             ref={containerRef}
-            className="w-full overflow-x-hidden"
+            // prettier-ignore
+            className="relative w-full overflow-x-hidden py-2
+            before:absolute before:top-0 before:left-0 before:z-10
+            before:h-full before:w-16 before:bg-gradient-to-l
+            before:from-transparent before:to-background
+            after:absolute after:top-0 after:right-0 after:h-full
+            after:w-16 after:bg-gradient-to-r
+            after:from-transparent after:to-background"
         >
             <div
                 className="relative flex w-[300%] flex-row gap-x-4"
