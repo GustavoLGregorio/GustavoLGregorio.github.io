@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import TypewriterText from "./TypewriterText";
 
 export default function Hero() {
     // prettier-ignore
@@ -27,8 +28,21 @@ export default function Hero() {
             <h1 className="cs-font-tilt-warp text-5xl">
                 Gustavo Luiz Gregorio
             </h1>
-            <h2 className="cs-font-montserrat text-2xl">
-                Desenvolvedor Fullstack
+            <h2 className="cs-font-montserrat relative w-full text-2xl">
+                <div className="absolute top-0 z-10 w-full">
+                    <TypewriterText
+                        text="Desenvolvedor Fullstack | Web Tooling"
+                        typeSpeed={100}
+                        deleteSpeed={80}
+                    />
+                </div>
+                <div className="absolute top-1 w-full text-[indigo]">
+                    <TypewriterText
+                        text="Desenvolvedor Fullstack | Web Tooling"
+                        typeSpeed={100}
+                        deleteSpeed={80}
+                    />
+                </div>
             </h2>
         </div>
     );
