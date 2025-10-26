@@ -5,9 +5,5 @@ type MainProps = {
 };
 
 export default function Main(props: MainProps) {
-    return (
-        <div className="flex flex-col gap-16 p-4">
-            {props.children}
-        </div>
-    );
+    return <div className="flex flex-col gap-16 p-4">{props.children}</div>;
 }

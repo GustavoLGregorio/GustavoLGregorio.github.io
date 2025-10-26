@@ -4,10 +4,12 @@ import Main from "./components/Main";
 import Projects from "./components/Projects";
 import About from "./components/About";
 import Footer from "./components/Footer";
+import Background from "./components/Background";
 
 export default function App() {
     return (
-        <div className="bg-background grid grid-cols-1 grid-rows-subgrid text-[foreground]">
+        <div className="grid grid-cols-1 grid-rows-subgrid text-[foreground]">
+            <Background />
             <Header></Header>
             <Hero></Hero>
             <Main>

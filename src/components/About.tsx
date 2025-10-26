@@ -1,5 +1,6 @@
-import Technologies from "./Technologies";
+import TechCarousel from "./TechCarousel";
 import SectionTitle from "./SectionTitle";
+import profile_pic from "./../assets/images/profile_pic.png";
 
 export default function About() {
     return (
@@ -8,18 +9,17 @@ export default function About() {
 
             <div className="flex flex-col gap-8">
                 <img
-                    src="./../src/assets/images/cat.jpg"
+                    src={profile_pic}
                     alt="Foto de Gustavo Luiz Gregorio"
                     className="aspect-square w-[50%] self-center rounded-xl object-cover object-center"
                 />
                 <p className="cs-font-fragment-mono">
-                    Meu nome é Gustavo, tenho 21 anos e sou
-                    graduando em Técnologia em Analise e
-                    Desenvolvimento de Sistemas (TADS) no Instituto
-                    Federal do Paraná (IFPR). Gosto de programar
+                    Meu nome é Gustavo, tenho 21 anos e sou graduando em
+                    Técnologia em Analise e Desenvolvimento de Sistemas (TADS)
+                    no Instituto Federal do Paraná (IFPR). Gosto de programar
                     jogos e ferramentas.
                 </p>
-                <Technologies />
+                <TechCarousel />
             </div>
         </section>
     );
