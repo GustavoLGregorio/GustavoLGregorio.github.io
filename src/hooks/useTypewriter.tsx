@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react";
 
-export function useTypewriter(
-    text: string,
-    speed: number,
-    dSpeed: number,
-) {
+export function useTypewriter(text: string, speed: number, dSpeed: number) {
     const [result, setResult] = useState<string>("");
     const [isReverse, setIsReverse] = useState<boolean>(false);
 

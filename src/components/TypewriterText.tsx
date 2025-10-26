@@ -11,11 +11,7 @@ export default function TypewriterText(props: TypewriterTextProps) {
         <div className="relative">
             <div className="cs-visually-hidden">{props.text}</div>
             <div className="absolute">
-                {useTypewriter(
-                    props.text,
-                    props.typeSpeed,
-                    props.deleteSpeed,
-                )}
+                {useTypewriter(props.text, props.typeSpeed, props.deleteSpeed)}
             </div>
         </div>
     );
