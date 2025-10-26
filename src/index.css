@@ -24,6 +24,15 @@ body {
     background-color: var(--color-background);
 }
 
+#root {
+    position: absolute;
+    z-index: 10;
+}
+#particles {
+    position: fixed;
+    z-index: 0;
+}
+
 /* 
 a {
 	font-weight: 500;
