@@ -33,6 +33,13 @@ body {
     z-index: 0;
 }
 
+a:hover,
+.cs-link:hover,
+a:not():has(article) {
+    color: #d78fee;
+    transition: color ease 150ms;
+}
+
 /* 
 a {
 	font-weight: 500;

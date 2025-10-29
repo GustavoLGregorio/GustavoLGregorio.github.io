@@ -11,13 +11,11 @@ export default function About() {
                 <img
                     src={profile_pic}
                     alt="Foto de Gustavo Luiz Gregorio"
-                    className="aspect-square w-[50%] self-center rounded-xl object-cover object-center"
+                    className="aspect-square w-1/2 self-center rounded-xl object-cover object-center sm:w-1/3"
                 />
                 <p className="cs-font-fragment-mono">
-                    Meu nome é Gustavo, tenho 21 anos e sou graduando em
-                    Técnologia em Analise e Desenvolvimento de Sistemas (TADS)
-                    no Instituto Federal do Paraná (IFPR). Gosto de programar
-                    jogos e ferramentas.
+                    Meu nome é Gustavo, tenho 21 anos e sou graduando em Técnologia em Analise e Desenvolvimento de
+                    Sistemas (TADS) no Instituto Federal do Paraná (IFPR). Gosto de programar jogos e ferramentas.
                 </p>
                 <TechCarousel />
             </div>

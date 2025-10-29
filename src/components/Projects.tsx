@@ -27,7 +27,7 @@ export default function Projects() {
             title: "ParticlesJS",
             imageSource: imgEntropyParticles,
             imageAlt: "",
-            description: "Ferramenta de desenhos utilizando partículas (esse fundo de tela)",
+            description: "Engine de criação de partículas (esse fundo de tela)",
             link: "https://particles-js-pi.vercel.app/",
             icons: [faHtml5, faCss3, faJs],
         },
@@ -45,8 +45,7 @@ export default function Projects() {
             title: "Lixadora Gregorio",
             imageSource: imgLixadoraGregorio,
             imageAlt: "",
-            description:
-                "Site criado para uma empresa familiar especializada em lixamento de pisos",
+            description: "Site de uma empresa de lixamento de pisos",
             link: "https://lixadora-gregorio.vercel.app/",
             icons: [faHtml5, faCss3, faJs],
         },
@@ -65,7 +64,7 @@ export default function Projects() {
         <section>
             <SectionTitle title="projetos" />
 
-            <div className="flex flex-col gap-6">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {projects.map((project) => (
                     <Project
                         key={project.id}
