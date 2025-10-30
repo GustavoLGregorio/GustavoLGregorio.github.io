@@ -134,17 +134,12 @@ export default function TechCarousel() {
         >
             <div className="relative flex flex-row gap-x-4" ref={carouselRef}>
                 {duplicatedTechs.map((tech, index) => (
-                    <div
-                        className="flex flex-col gap-2"
-                        key={`${tech.id}-${index}`}
-                    >
+                    <div className="flex flex-col gap-2" key={`${tech.id}-${index}`}>
                         <img
                             src={tech.icon}
-                            className="bg-background flex aspect-square w-20 max-w-32 min-w-20 items-center justify-center rounded-lg text-4xl"
+                            className="cs-filter-blur flex aspect-square w-24 max-w-32 min-w-20 items-center justify-center rounded-[14px] bg-[hsla(0,0%,50%,0.2)] p-4 text-4xl sm:w-28 md:w-32"
                         />
-                        <h4 className="cs-font-cascadia-code text-center text-sm font-bold uppercase">
-                            {tech.name}
-                        </h4>
+                        <h4 className="cs-font-cascadia-code text-center text-sm font-bold uppercase">{tech.name}</h4>
                     </div>
                 ))}
             </div>

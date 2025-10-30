@@ -8,7 +8,7 @@ import Background from "./components/Background";
 
 export default function App() {
     return (
-        <div className="grid grid-cols-1 grid-rows-subgrid text-[foreground]">
+        <div className="grid grid-cols-1 grid-rows-subgrid text-lg text-[foreground] sm:text-xl md:text-2xl">
             <Background />
             <Header></Header>
             <Hero></Hero>

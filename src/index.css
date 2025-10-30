@@ -33,9 +33,8 @@ body {
     z-index: 0;
 }
 
-a:hover,
-.cs-link:hover,
-a:not():has(article) {
+a:hover:not(:has(article)),
+.cs-link:hover {
     color: #d78fee;
     transition: color ease 150ms;
 }

@@ -21,8 +21,10 @@ export default function Hero() {
 
     return (
         <div className="flex flex-col justify-center gap-4 px-4 sm:text-center" ref={containerRef}>
-            <h1 className="cs-font-tilt-warp cs-text-gradient text-6xl">Gustavo Luiz Gregorio</h1>
-            <h2 className="cs-font-montserrat relative flex w-full self-center text-4xl font-semibold sm:w-1/2">
+            <h1 className="cs-font-tilt-warp cs-text-gradient text-6xl sm:text-7xl md:text-8xl">
+                Gustavo Luiz Gregorio
+            </h1>
+            <h2 className="cs-font-montserrat relative flex w-full self-center text-4xl font-semibold sm:w-1/2 sm:text-5xl md:text-6xl">
                 <div className="absolute top-0 z-10 w-full">
                     <TypewriterText text="Desenvolvedor Fullstack | Web Tooling" typeSpeed={100} deleteSpeed={80} />
                 </div>

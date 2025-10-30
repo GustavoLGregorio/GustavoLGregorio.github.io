@@ -35,6 +35,10 @@ export default function Header() {
         return () => window.removeEventListener("resize", resizeHandler);
     }, [windowSize]);
 
+    const handleOnClickPageScroll = () => {
+        window.scrollTo({ top: window.outerHeight });
+    };
+
     const toggleMenu = () => {
         if (isToggled) setIsToggled(false);
         else setIsToggled(true);
@@ -46,7 +50,7 @@ export default function Header() {
 
     const TogglableNav = () => {
         return (
-            <nav className="">
+            <nav>
                 <button onClick={toggleMenu} className="cursor-pointer">
                     <FontAwesomeIcon icon={navbarToggler} size="2x" />
                 </button>
@@ -55,10 +59,12 @@ export default function Header() {
                     className={`${menuClasses} bg-background absolute left-0 mt-4 h-dvh w-full flex-col gap-2 px-4 py-4`}
                 >
                     <div className="p-4">
-                        <li className="text-lg capitalize">
-                            <a href="">Sobre</a>
+                        <li className="capitalize">
+                            <a onClick={handleOnClickPageScroll} className="cursor-pointer">
+                                Sobre
+                            </a>
                         </li>
-                        <li className="text-lg capitalize">
+                        <li className="capitalize">
                             <a onClick={handleCurriculumClick} className="cursor-pointer">
                                 Currículo
                             </a>
@@ -86,10 +92,12 @@ export default function Header() {
         return (
             <nav>
                 <ul ref={navRef} className="bg-background flex w-full items-center gap-4">
-                    <li className="text-lg capitalize">
-                        <a href="">Sobre</a>
+                    <li className="capitalize">
+                        <a onClick={handleOnClickPageScroll} className="cursor-pointer">
+                            Sobre
+                        </a>
                     </li>
-                    <li className="text-lg capitalize">
+                    <li className="capitalize">
                         <button onClick={handleCurriculumClick} className="cs-link cursor-pointer">
                             Currículo
                         </button>
@@ -110,7 +118,7 @@ export default function Header() {
     };
 
     return (
-        <header className="bg-background cs-font-lalezar absolute z-50 flex w-full items-center justify-between px-6 py-6">
+        <header className="bg-background cs-font-lalezar fixed z-50 flex w-full items-center justify-between px-6 py-6 text-lg sm:text-xl md:text-2xl">
             <a href="#" className="text-xl">
                 Gustavo L. Gregorio
             </a>

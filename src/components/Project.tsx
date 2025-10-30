@@ -11,16 +11,11 @@ export type ProjectProps = {
 };
 export default function Project(props: ProjectProps) {
     return (
-        <a
-            className="cs-anim-glow cs-anim-neon rounded-xl after:rounded-xl"
-            href={props.link}
-        >
+        <a className="cs-anim-glow cs-anim-neon rounded-xl after:rounded-xl" href={props.link}>
             <article className="cs-transition relative flex flex-col-reverse opacity-100">
                 <div className="cs-filter-blur absolute top-[50%] z-20 flex w-[80%] translate-y-[-50%] flex-col gap-1 self-center rounded-xl bg-[hsla(0,0%,5%,0.3)] p-4">
-                    <h3 className="cs-font-tilt-warp text-3xl capitalize">
-                        {props.title}
-                    </h3>
-                    <p className="cs-font-cascadia-code text-xl capitalize">
+                    <h3 className="cs-font-tilt-warp text-3xl capitalize sm:text-4xl md:text-5xl">{props.title}</h3>
+                    <p className="cs-font-cascadia-code text-xl capitalize sm:text-xl md:text-2xl">
                         {props.description}
                     </p>
                     <ul className="flex gap-2 pt-2">
