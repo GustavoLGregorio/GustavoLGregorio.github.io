@@ -118,7 +118,7 @@ export default function Header() {
     };
 
     return (
-        <header className="bg-background cs-font-lalezar fixed z-50 flex w-full items-center justify-between px-6 py-6 text-lg sm:text-xl md:text-2xl">
+        <header className="bg-background cs-font-lalezar fixed z-50 flex w-full items-center justify-between px-6 py-6 text-lg sm:text-xl">
             <a href="#" className="text-xl">
                 Gustavo L. Gregorio
             </a>

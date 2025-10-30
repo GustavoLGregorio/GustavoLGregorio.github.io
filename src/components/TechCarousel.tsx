@@ -137,7 +137,7 @@ export default function TechCarousel() {
                     <div className="flex flex-col gap-2" key={`${tech.id}-${index}`}>
                         <img
                             src={tech.icon}
-                            className="cs-filter-blur flex aspect-square w-24 max-w-32 min-w-20 items-center justify-center rounded-[14px] bg-[hsla(0,0%,50%,0.2)] p-4 text-4xl sm:w-28 md:w-32"
+                            className="cs-filter-blur flex aspect-square w-24 max-w-28 min-w-20 items-center justify-center rounded-[14px] bg-[hsla(0,0%,50%,0.2)] p-4 text-4xl sm:w-28"
                         />
                         <h4 className="cs-font-cascadia-code text-center text-sm font-bold uppercase">{tech.name}</h4>
                     </div>
